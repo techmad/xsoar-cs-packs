@@ -12,7 +12,7 @@
 	"formatScript": "",
 	"fromServerVersion": "5.5.0",
 	"id": "Attack Pattern",
-	"itemVersion": "2.2.1",
+	"itemVersion": "2.2.3",
 	"layout": "STIX Attack Pattern",
 	"locked": false,
 	"manualMapping": {},

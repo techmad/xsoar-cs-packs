@@ -1,0 +1,47 @@
+{
+	"brands": null,
+	"defaultIncidentType": "",
+	"description": "Maps incoming AWS indicator fields.",
+	"feed": true,
+	"fromServerVersion": "6.0.0",
+	"id": "AWS Feed",
+	"incidentSamples": null,
+	"indicatorSamples": null,
+	"instanceIds": null,
+	"itemVersion": "1.0.5",
+	"keyTypeMap": null,
+	"locked": false,
+	"logicalVersion": 0,
+	"mapping": {
+		"CIDR": {
+			"dontMapEventToLabels": false,
+			"internalMapping": {
+				"Region": {
+					"complex": null,
+					"simple": "region"
+				},
+				"Tags": {
+					"complex": null,
+					"simple": "service"
+				}
+			}
+		}
+	},
+	"name": "AWS Feed - Incoming Mapper",
+	"nameRaw": "AWS Feed - Incoming Mapper",
+	"packID": "FeedAWS",
+	"packPropagationLabels": [
+		"all"
+	],
+	"sortValues": null,
+	"sourceClassifierId": "",
+	"system": true,
+	"toServerVersion": "",
+	"transformer": {
+		"complex": null,
+		"simple": ""
+	},
+	"type": "mapping-incoming",
+	"unclassifiedCases": null,
+	"version": -1
+}

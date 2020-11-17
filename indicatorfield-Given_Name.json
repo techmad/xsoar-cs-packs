@@ -18,7 +18,7 @@
 	"hidden": false,
 	"id": "indicator_givenname",
 	"isReadOnly": false,
-	"itemVersion": "2.2.1",
+	"itemVersion": "2.2.3",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "Given Name",

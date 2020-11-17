@@ -1,0 +1,36 @@
+args:
+- description: The name of the incident custom field of type date
+  name: fieldName
+  required: true
+comment: Sets a custom incident field with current date
+commonfields:
+  id: SetDateField
+  version: -1
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: 1.2.80
+    packID: CommonScripts
+    packPropagationLabels:
+    - all
+    propagationLabels: []
+    toServerVersion: ""
+enabled: true
+name: SetDateField
+pswd: ""
+runas: DBotWeakRole
+runonce: false
+script: |-
+  from time import strftime
+
+  field_name = demisto.args()['fieldName']
+
+  t = strftime("%a, %d %b %Y %H:%M:%S %Z")
+  res = demisto.executeCommand("setIncident", {field_name:t})
+  demisto.results(res)
+scripttarget: 0
+subtype: python2
+system: true
+tags:
+- Utility
+type: python

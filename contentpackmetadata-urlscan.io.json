@@ -1,0 +1,129 @@
+{
+	"author": "Cortex XSOAR",
+	"authorImage": "content/packs/Base/Author_image.png",
+	"beta": false,
+	"categories": [
+		"Data Enrichment \u0026 Threat Intelligence"
+	],
+	"certification": "certified",
+	"contentItemTypes": [
+		"integration",
+		"automation"
+	],
+	"contentItems": {
+		"automation": [
+			{
+				"description": "This script enables gives you the functionality of getting the http transactions made for a given URL using the UrlScan integration. \nThe proper use of this script, this while using it inside a playbook, is by going to the 'Advanced' section in the task that executes this script, and making sure to check the checkbox of 'Run without a worker' - this will cause the system to use much less resources in the polling action.",
+				"name": "UrlscanGetHttpTransactions",
+				"tags": [
+					"polling",
+					"UrlScan"
+				]
+			}
+		],
+		"classifier": null,
+		"dashboard": null,
+		"incidentfield": null,
+		"incidenttype": null,
+		"indicatorfield": null,
+		"integration": [
+			{
+				"category": "Data Enrichment \u0026 Threat Intelligence",
+				"commands": [
+					{
+						"description": "Search for an indicator that is related to former urlscan.io scans.",
+						"name": "urlscan-search"
+					},
+					{
+						"description": "Deprecated. Use the url command instead.",
+						"name": "urlscan-submit"
+					},
+					{
+						"description": "Submits a URL to scan.",
+						"name": "url"
+					},
+					{
+						"description": "Returns the HTTP transaction list for the specified URL. Do not use this command in conjunction with the urlscan-get-http-transactions script.",
+						"name": "urlscan-get-http-transaction-list"
+					},
+					{
+						"description": "Submits a URL to retrieve its UUID.",
+						"name": "urlscan-submit-url-command"
+					},
+					{
+						"description": "Polls the urlscan service regarding the results of the specified URI.",
+						"name": "urlscan-poll-uri"
+					},
+					{
+						"description": "Returns the results page for the specified UUID.",
+						"name": "urlscan-get-result-page"
+					}
+				],
+				"description": "Urlscan.io reputation",
+				"name": "urlscan.io"
+			}
+		],
+		"layoutscontainer": null,
+		"playbook": null,
+		"report": null,
+		"reputation": null,
+		"widget": null
+	},
+	"created": "2020-10-15T16:00:00Z",
+	"currentVersion": "1.0.5",
+	"dependencies": {
+		"Base": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.3.33",
+			"name": "Base"
+		}
+	},
+	"deprecated": false,
+	"description": "Urlscan.io reputation",
+	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
+	"fromServerVersion": "5.0.0",
+	"general": [
+		"generalFieldCertified",
+		"generalFieldByCortexXSOAR",
+		"generalFieldFree",
+		"generalFieldSupportIncluded"
+	],
+	"id": "UrlScan",
+	"installMessage": "",
+	"integrations": [
+		{
+			"imagePath": "content/packs/UrlScan/urlscan.io_image.png",
+			"name": "urlscan.io"
+		}
+	],
+	"itemVersion": "1.0.5",
+	"keywords": [],
+	"legacy": true,
+	"name": "urlscan.io",
+	"packID": "UrlScan",
+	"premium": false,
+	"previewOnly": false,
+	"price": 0,
+	"propagationLabels": [
+		"all"
+	],
+	"rawKeywords": null,
+	"rawTags": null,
+	"rawUseCases": null,
+	"serverMaxVersion": "",
+	"serverMinVersion": "5.0.0",
+	"sortValues": null,
+	"support": "xsoar",
+	"supportDetails": {
+		"email": "",
+		"url": "https://www.paloaltonetworks.com/cortex"
+	},
+	"tags": [],
+	"toServerVersion": "",
+	"updated": "2020-11-09T18:42:21Z",
+	"useCases": [],
+	"version": -1,
+	"versionInfo": "180529"
+}

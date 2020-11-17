@@ -19,7 +19,7 @@
 	"hidden": false,
 	"id": "indicator_displayname",
 	"isReadOnly": false,
-	"itemVersion": "2.2.1",
+	"itemVersion": "2.2.3",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "Display Name",

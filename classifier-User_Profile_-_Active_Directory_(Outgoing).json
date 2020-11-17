@@ -1,0 +1,167 @@
+{
+	"brands": null,
+	"defaultIncidentType": "",
+	"description": "",
+	"feed": false,
+	"fromServerVersion": "6.0.0",
+	"id": "b5955000-e398-4b82-885f-9068fda553e8",
+	"incidentSamples": null,
+	"indicatorSamples": null,
+	"instanceIds": null,
+	"itemVersion": "1.1.0",
+	"keyTypeMap": null,
+	"locked": false,
+	"logicalVersion": 0,
+	"mapping": {
+		"User Profile": {
+			"dontMapEventToLabels": true,
+			"internalMapping": {
+				"c": {
+					"complex": null,
+					"simple": "country"
+				},
+				"cn": {
+					"complex": {
+						"accessor": "",
+						"filters": [],
+						"root": "email",
+						"transformers": [
+							{
+								"args": {
+									"delimiter": {
+										"isContext": false,
+										"value": {
+											"complex": null,
+											"simple": "@"
+										}
+									}
+								},
+								"operator": "split"
+							},
+							{
+								"args": {
+									"index": {
+										"isContext": false,
+										"value": {
+											"complex": null,
+											"simple": "0"
+										}
+									}
+								},
+								"operator": "atIndex"
+							}
+						]
+					},
+					"simple": ""
+				},
+				"department": {
+					"complex": null,
+					"simple": "department"
+				},
+				"displayName": {
+					"complex": null,
+					"simple": "displayname"
+				},
+				"employeeID": {
+					"complex": null,
+					"simple": "employeeid"
+				},
+				"givenName": {
+					"complex": null,
+					"simple": "givenname"
+				},
+				"l": {
+					"complex": null,
+					"simple": "city"
+				},
+				"mail": {
+					"complex": null,
+					"simple": "email"
+				},
+				"mobile": {
+					"complex": null,
+					"simple": "mobilephone"
+				},
+				"ou": {
+					"complex": null,
+					"simple": ""
+				},
+				"postalCode": {
+					"complex": null,
+					"simple": "zipcode"
+				},
+				"samaccountname": {
+					"complex": {
+						"accessor": "",
+						"filters": [],
+						"root": "email",
+						"transformers": [
+							{
+								"args": {
+									"delimiter": {
+										"isContext": false,
+										"value": {
+											"complex": null,
+											"simple": "@"
+										}
+									}
+								},
+								"operator": "split"
+							},
+							{
+								"args": {
+									"index": {
+										"isContext": false,
+										"value": {
+											"complex": null,
+											"simple": "0"
+										}
+									}
+								},
+								"operator": "atIndex"
+							}
+						]
+					},
+					"simple": ""
+				},
+				"sn": {
+					"complex": null,
+					"simple": "surname"
+				},
+				"st": {
+					"complex": null,
+					"simple": "statename"
+				},
+				"streetAddress": {
+					"complex": null,
+					"simple": "streetaddress"
+				},
+				"title": {
+					"complex": null,
+					"simple": "title"
+				},
+				"userPrincipalName": {
+					"complex": null,
+					"simple": "username"
+				}
+			}
+		}
+	},
+	"name": "User Profile - Active Directory (Outgoing)",
+	"nameRaw": "User Profile - Active Directory (Outgoing)",
+	"packID": "Active_Directory_Query",
+	"packPropagationLabels": [
+		"all"
+	],
+	"sortValues": null,
+	"sourceClassifierId": "",
+	"system": true,
+	"toServerVersion": "",
+	"transformer": {
+		"complex": null,
+		"simple": ""
+	},
+	"type": "mapping-outgoing",
+	"unclassifiedCases": null,
+	"version": -1
+}

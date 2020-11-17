@@ -1,0 +1,166 @@
+{
+	"author": "Cortex XSOAR",
+	"authorImage": "content/packs/Base/Author_image.png",
+	"beta": false,
+	"categories": [
+		"Data Enrichment \u0026 Threat Intelligence"
+	],
+	"certification": "certified",
+	"contentItemTypes": [
+		"integration",
+		"playbook"
+	],
+	"contentItems": {
+		"automation": null,
+		"classifier": null,
+		"dashboard": null,
+		"incidentfield": null,
+		"incidenttype": null,
+		"indicatorfield": null,
+		"integration": [
+			{
+				"category": "Data Enrichment \u0026 Threat Intelligence",
+				"commands": [
+					{
+						"description": "Checks the file reputation of the specified hash.",
+						"name": "file"
+					},
+					{
+						"description": "Checks the reputation of an IP address.",
+						"name": "ip"
+					},
+					{
+						"description": "Checks the reputation of a URL.",
+						"name": "url"
+					},
+					{
+						"description": "Checks the reputation of a domain.",
+						"name": "domain"
+					},
+					{
+						"description": "Submits a file for scanning.",
+						"name": "file-scan"
+					},
+					{
+						"description": "Re-scans an already submitted file. This avoids having to upload the file again.",
+						"name": "file-rescan"
+					},
+					{
+						"description": "Scans a specified URL.",
+						"name": "url-scan"
+					},
+					{
+						"description": "Adds comments to files and URLs.",
+						"name": "vt-comments-add"
+					},
+					{
+						"description": "Private API. Get a special URL for files larger than 32 MB.",
+						"name": "vt-file-scan-upload-url"
+					},
+					{
+						"description": "Private API. Retrieves comments for a given resource.",
+						"name": "vt-comments-get"
+					}
+				],
+				"description": "Analyze suspicious hashes, URLs, domains and IP addresses",
+				"name": "VirusTotal"
+			}
+		],
+		"layoutscontainer": null,
+		"playbook": [
+			{
+				"description": "Detonate one or more files using the VirusTotal integration. This playbook returns relevant reports to the War Room and file reputations to the context data.",
+				"name": "Detonate File - VirusTotal"
+			}
+		],
+		"report": null,
+		"reputation": null,
+		"widget": null
+	},
+	"created": "2020-04-14T00:00:00Z",
+	"currentVersion": "1.0.2",
+	"dependencies": {
+		"Base": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.3.33",
+			"name": "Base"
+		},
+		"CommonPlaybooks": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.8.5",
+			"name": "Common Playbooks"
+		},
+		"CommonScripts": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.2.75",
+			"name": "Common Scripts"
+		},
+		"PolySwarm": {
+			"author": "PolySwarm",
+			"certification": "",
+			"mandatory": false,
+			"minVersion": "1.0.2",
+			"name": "PolySwarm"
+		}
+	},
+	"deprecated": false,
+	"description": "Analyze suspicious hashes, URLs, domains and IP addresses",
+	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
+	"fromServerVersion": "5.5.0",
+	"general": [
+		"generalFieldCertified",
+		"generalFieldByCortexXSOAR",
+		"generalFieldFree",
+		"generalFieldSupportIncluded"
+	],
+	"id": "VirusTotal",
+	"installMessage": "",
+	"integrations": [
+		{
+			"imagePath": "content/packs/VirusTotal/VirusTotal_image.png",
+			"name": "VirusTotal"
+		},
+		{
+			"imagePath": "content/packs/PolySwarm/PolySwarm_image.png",
+			"name": "PolySwarm (Partner Contribution)"
+		},
+		{
+			"imagePath": "content/packs/PolySwarm/PolySwarm_image.png",
+			"name": "PolySwarm"
+		}
+	],
+	"itemVersion": "1.0.2",
+	"keywords": [],
+	"legacy": true,
+	"name": "VirusTotal",
+	"packID": "VirusTotal",
+	"premium": false,
+	"previewOnly": false,
+	"price": 0,
+	"propagationLabels": [
+		"all"
+	],
+	"rawKeywords": null,
+	"rawTags": null,
+	"rawUseCases": null,
+	"serverMaxVersion": "",
+	"serverMinVersion": "5.5.0",
+	"sortValues": null,
+	"support": "xsoar",
+	"supportDetails": {
+		"email": "",
+		"url": "https://www.paloaltonetworks.com/cortex"
+	},
+	"tags": [],
+	"toServerVersion": "",
+	"updated": "2020-11-09T18:46:13Z",
+	"useCases": [],
+	"version": -1,
+	"versionInfo": "180529"
+}

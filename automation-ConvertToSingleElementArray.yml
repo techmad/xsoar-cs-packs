@@ -1,0 +1,41 @@
+args:
+- default: true
+  description: The string to convert to an array of that string.
+  isArray: true
+  name: value
+comment: Converts a single string to an array of that string.
+commonfields:
+  id: ConvertToSingleElementArray
+  version: -1
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: 1.2.80
+    packID: CommonScripts
+    packPropagationLabels:
+    - all
+    propagationLabels: []
+    toServerVersion: ""
+enabled: true
+name: ConvertToSingleElementArray
+pswd: ""
+runas: DBotWeakRole
+runonce: false
+script: |2
+
+
+  args = demisto.args()
+  value = args.get("value")
+  if value and isinstance(value, list):
+      demisto.results(value)
+  elif value:
+      demisto.results([value])
+  else:
+      demisto.results([])
+scripttarget: 0
+subtype: python3
+system: true
+tags:
+- transformer
+- entirelist
+type: python

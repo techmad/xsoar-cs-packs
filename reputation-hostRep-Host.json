@@ -1,0 +1,309 @@
+{
+	"contextPath": "",
+	"contextValue": "",
+	"defaultMapping": {
+		"associations": {
+			"complex": {
+				"accessor": "Associations",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"biosversion": {
+			"complex": {
+				"accessor": "BIOVersion",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"blocked": {
+			"complex": {
+				"accessor": "Blocked",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"devicemodel": {
+			"complex": {
+				"accessor": "Model",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"dhcpserver": {
+			"complex": {
+				"accessor": "DHCPServer",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"domainname": {
+			"complex": {
+				"accessor": "Domain",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"indicatoridentification": {
+			"complex": {
+				"accessor": "ID",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "toUpperCase"
+					},
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"ipaddress": {
+			"complex": {
+				"accessor": "IP",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"macaddress": {
+			"complex": {
+				"accessor": "MACAddress",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "toUpperCase"
+					},
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"memory": {
+			"complex": {
+				"accessor": "Memory",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"operatingsystem": {
+			"complex": {
+				"accessor": "OS",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"operatingsystemversion": {
+			"complex": {
+				"accessor": "OSVersion",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"processor": {
+			"complex": {
+				"accessor": "Processor",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"processors": {
+			"complex": {
+				"accessor": "Processors",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"quarantined": {
+			"complex": {
+				"accessor": "Quarantined",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"reportedby": {
+			"complex": {
+				"accessor": "ReportedBy",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"tags": {
+			"complex": {
+				"accessor": "Tags",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"threattypes": {
+			"complex": {
+				"accessor": "ThreatTypes",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"trafficlightprotocol": {
+			"complex": {
+				"accessor": "TrafficLightProtocol",
+				"filters": [],
+				"root": "Host",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		}
+	},
+	"details": "Host",
+	"disabled": false,
+	"enhancementScriptNames": [],
+	"excludedBrands": [],
+	"expiration": 0,
+	"file": false,
+	"fileHashesPriority": null,
+	"formatScript": "",
+	"fromServerVersion": "5.5.0",
+	"id": "hostRep",
+	"itemVersion": "2.2.1",
+	"layout": "hostRep",
+	"locked": false,
+	"manualMapping": null,
+	"mergeContext": false,
+	"packID": "CommonTypes",
+	"packPropagationLabels": [
+		"all"
+	],
+	"propagationLabels": [],
+	"regex": "",
+	"reputationCommand": "",
+	"reputationScriptName": "",
+	"shouldShareComments": false,
+	"sortValues": null,
+	"system": true,
+	"toServerVersion": "",
+	"updateAfter": 0,
+	"version": -1
+}

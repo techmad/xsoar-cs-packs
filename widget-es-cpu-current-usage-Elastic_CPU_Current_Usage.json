@@ -1,0 +1,54 @@
+{
+	"category": "",
+	"dataType": "system",
+	"dateRange": {
+		"fromDate": "0001-01-01T00:00:00Z",
+		"fromDateLicense": "0001-01-01T00:00:00Z",
+		"period": {
+			"by": "",
+			"byFrom": "",
+			"byTo": "",
+			"field": "",
+			"fromValue": null,
+			"toValue": null
+		},
+		"toDate": "0001-01-01T00:00:00Z"
+	},
+	"description": "Elasticsearch CPU Current Usage %",
+	"fromServerVersion": "5.5.0",
+	"id": "es-cpu-current-usage",
+	"isPredefined": true,
+	"itemVersion": "1.0.5",
+	"name": "Elastic CPU Current Usage",
+	"packID": "CommonWidgets",
+	"packPropagationLabels": [
+		"all"
+	],
+	"params": {
+		"colors": {
+			"isEnabled": true,
+			"items": {
+				"#00CD33": {
+					"value": -1
+				},
+				"#FAC100": {
+					"value": 50
+				},
+				"#FF1B15": {
+					"value": 80
+				}
+			},
+			"type": "above"
+		},
+		"currencySign": "%",
+		"signAlignment": "right"
+	},
+	"propagationLabels": [],
+	"query": "es-cpu.usedPercent",
+	"size": 0,
+	"sort": null,
+	"sortValues": null,
+	"toServerVersion": "",
+	"version": -1,
+	"widgetType": "number"
+}

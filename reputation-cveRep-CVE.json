@@ -1,0 +1,179 @@
+{
+	"contextPath": "CVE(val.ID \u0026\u0026 val.ID === obj.ID)",
+	"contextValue": "ID",
+	"defaultMapping": {
+		"associations": {
+			"complex": {
+				"accessor": "Associations",
+				"filters": [],
+				"root": "CVE",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"cvedescription": {
+			"complex": {
+				"accessor": "CVEDescription",
+				"filters": [],
+				"root": "CVE",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"cvemodified": {
+			"complex": {
+				"accessor": "Modified",
+				"filters": [],
+				"root": "CVE",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"cvss": {
+			"complex": {
+				"accessor": "CVSS",
+				"filters": [],
+				"root": "CVE",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"indicatoridentification": {
+			"complex": {
+				"accessor": "ID",
+				"filters": [],
+				"root": "CVE",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "toUpperCase"
+					},
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"published": {
+			"complex": {
+				"accessor": "Published",
+				"filters": [],
+				"root": "CVE",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"reportedby": {
+			"complex": {
+				"accessor": "ReportedBy",
+				"filters": [],
+				"root": "CVE",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"tags": {
+			"complex": {
+				"accessor": "Tags",
+				"filters": [],
+				"root": "CVE",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"threattypes": {
+			"complex": {
+				"accessor": "ThreatTypes",
+				"filters": [],
+				"root": "CVE",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"trafficlightprotocol": {
+			"complex": {
+				"accessor": "TrafficLightProtocol",
+				"filters": [],
+				"root": "CVE",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		}
+	},
+	"details": "CVE",
+	"disabled": false,
+	"enhancementScriptNames": [],
+	"excludedBrands": [],
+	"expiration": 0,
+	"file": false,
+	"fileHashesPriority": null,
+	"formatScript": "",
+	"fromServerVersion": "5.5.0",
+	"id": "cveRep",
+	"itemVersion": "2.2.1",
+	"layout": "cveRep",
+	"locked": false,
+	"manualMapping": null,
+	"mergeContext": false,
+	"packID": "CommonTypes",
+	"packPropagationLabels": [
+		"all"
+	],
+	"propagationLabels": [],
+	"regex": "CVE-\\d{4}-\\d{4,7}",
+	"reputationCommand": "cve",
+	"reputationScriptName": "cveReputation",
+	"shouldShareComments": false,
+	"sortValues": null,
+	"system": true,
+	"toServerVersion": "",
+	"updateAfter": 0,
+	"version": -1
+}

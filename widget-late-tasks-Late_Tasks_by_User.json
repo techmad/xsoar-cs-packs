@@ -1,0 +1,39 @@
+{
+	"category": "",
+	"dataType": "tasks",
+	"dateRange": {
+		"fromDate": "0001-01-01T00:00:00Z",
+		"fromDateLicense": "0001-01-01T00:00:00Z",
+		"period": {
+			"by": "",
+			"byFrom": "days",
+			"byTo": "",
+			"field": "",
+			"fromValue": 7,
+			"toValue": null
+		},
+		"toDate": "0001-01-01T00:00:00Z"
+	},
+	"fromServerVersion": "5.0.0",
+	"id": "late-tasks",
+	"isPredefined": true,
+	"itemVersion": "1.0.5",
+	"name": "Late Tasks by User",
+	"packID": "CommonWidgets",
+	"packPropagationLabels": [
+		"all"
+	],
+	"params": {
+		"groupBy": [
+			"assignee"
+		]
+	},
+	"propagationLabels": [],
+	"query": "replaced:f and dueDate:\u003cnow",
+	"size": 0,
+	"sort": null,
+	"sortValues": null,
+	"toServerVersion": "",
+	"version": -1,
+	"widgetType": "bar"
+}

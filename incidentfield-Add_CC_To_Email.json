@@ -18,7 +18,7 @@
 	"hidden": false,
 	"id": "incident_addcctoemail",
 	"isReadOnly": false,
-	"itemVersion": "1.2.2",
+	"itemVersion": "1.3.0",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "Add CC To Email",

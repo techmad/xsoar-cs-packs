@@ -1,0 +1,304 @@
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: 1.0.2
+    packID: RecordedFuture
+    packPropagationLabels:
+    - all
+    propagationLabels: []
+    toServerVersion: ""
+description: URL reputation using Recorded Future SOAR enrichment
+id: Recorded Future URL Reputation
+inputs:
+- description: URL to get reputation of.
+  key: URL
+  playbookInputQuery: null
+  required: false
+  value:
+    complex:
+      accessor: Data
+      root: URL
+      transformers:
+      - operator: uniq
+name: Recorded Future URL Reputation
+outputs:
+- contextPath: DBotScore.Indicator
+  description: The indicator that was tested
+  type: string
+- contextPath: DBotScore.Type
+  description: Indicator type
+  type: string
+- contextPath: DBotScore.Vendor
+  description: Vendor used to calculate the score
+  type: string
+- contextPath: DBotScore.Score
+  description: The actual score
+  type: number
+- contextPath: URL.Malicious.Vendor
+  description: For malicious URLs, the vendor that made the decision
+  type: string
+- contextPath: URL.Malicious.Description
+  description: For malicious URLs, the reason that the vendor made the decision
+  type: string
+- contextPath: URL.Data
+  description: URL name
+  type: string
+- contextPath: RecordedFuture.URL.riskScore
+  description: Recorded Future URL Risk Score
+  type: number
+- contextPath: RecordedFuture.URL.riskLevel
+  description: Recorded Future URL Risk Level
+  type: string
+- contextPath: RecordedFuture.URL.Evidence.rule
+  description: Recorded Future Risk Rule Name
+  type: string
+- contextPath: RecordedFuture.URL.Evidence.mitigation
+  description: Recorded Future Risk Rule Mitigation
+  type: string
+- contextPath: RecordedFuture.URL.Evidence.description
+  description: Recorded Future Risk Rule description
+  type: string
+- contextPath: RecordedFuture.URL.Evidence.timestamp
+  description: Recorded Future Risk Rule timestamp
+  type: date
+- contextPath: RecordedFuture.URL.Evidence.level
+  description: Recorded Future Risk Rule Level
+  type: number
+- contextPath: RecordedFuture.URL.Evidence.ruleid
+  description: Recorded Future Risk Rule ID
+  type: string
+- contextPath: RecordedFuture.URL.name
+  description: URL
+  type: string
+- contextPath: RecordedFuture.URL.maxRules
+  description: Maximum count of Recorded Future URL Risk Rules
+  type: number
+- contextPath: RecordedFuture.URL.ruleCount
+  description: Number of triggered Recorded Future URL Risk Rules
+  type: number
+starttaskid: "0"
+system: true
+tasks:
+  "0":
+    id: "0"
+    ignoreworker: false
+    nexttasks:
+      '#none#':
+      - "16"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: b50e0577-4b53-4047-81cd-98a1f39b4e45
+      iscommand: false
+      name: ""
+      version: -1
+    taskid: b50e0577-4b53-4047-81cd-98a1f39b4e45
+    timertriggers: []
+    type: start
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 50
+        }
+      }
+  "16":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              simple: inputs.URL
+          operator: isExists
+      label: "yes"
+    id: "16"
+    ignoreworker: false
+    nexttasks:
+      '#default#':
+      - "24"
+      "yes":
+      - "35"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      value:
+        simple: inputs.url
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Do we have a url to check
+      id: 6e674458-38fe-4444-8f45-9d7a3722e1c7
+      iscommand: false
+      name: Is there a URL to get reputation of?
+      type: condition
+      version: -1
+    taskid: 6e674458-38fe-4444-8f45-9d7a3722e1c7
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 200
+        }
+      }
+  "24":
+    id: "24"
+    ignoreworker: false
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 30f3ff5b-5922-4260-821d-0faccc04cc9f
+      iscommand: false
+      name: Done
+      type: title
+      version: -1
+    taskid: 30f3ff5b-5922-4260-821d-0faccc04cc9f
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 50,
+          "y": 865
+        }
+      }
+  "35":
+    id: "35"
+    ignoreworker: false
+    nexttasks:
+      '#none#':
+      - "36"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      id: 739989e4-4116-4083-80d1-7797ec9e9e15
+      iscommand: false
+      name: Get reputation using Recorded Future API
+      type: title
+      version: -1
+    taskid: 739989e4-4116-4083-80d1-7797ec9e9e15
+    timertriggers: []
+    type: title
+    view: |-
+      {
+        "position": {
+          "x": 360,
+          "y": 370
+        }
+      }
+  "36":
+    conditions:
+    - condition:
+      - - left:
+            iscontext: true
+            value:
+              complex:
+                accessor: brand
+                filters:
+                - - ignorecase: true
+                    left:
+                      iscontext: true
+                      value:
+                        simple: modules.brand
+                    operator: containsString
+                    right:
+                      value:
+                        simple: Recorded Future
+                - - ignorecase: true
+                    left:
+                      iscontext: true
+                      value:
+                        simple: modules.state
+                    operator: isEqualString
+                    right:
+                      value:
+                        simple: active
+                root: modules
+          operator: isExists
+      label: "yes"
+    id: "36"
+    ignoreworker: false
+    nexttasks:
+      '#default#':
+      - "24"
+      "yes":
+      - "37"
+    note: false
+    quietmode: 0
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: ""
+      description: Checks if there is an active instance of the Recorded Future API
+        enabled.
+      id: 389dc4be-95dc-4f92-862b-221d91282c4c
+      iscommand: false
+      name: Is Recorded Future API enabled?
+      type: condition
+      version: -1
+    taskid: 389dc4be-95dc-4f92-862b-221d91282c4c
+    timertriggers: []
+    type: condition
+    view: |-
+      {
+        "position": {
+          "x": 360,
+          "y": 505
+        }
+      }
+  "37":
+    id: "37"
+    ignoreworker: false
+    nexttasks:
+      '#none#':
+      - "24"
+    note: false
+    quietmode: 0
+    scriptarguments:
+      url:
+        simple: ${inputs.URL}
+    separatecontext: false
+    skipunavailable: false
+    task:
+      brand: Recorded Future v2
+      description: Get a quick indication of the risk associated with a URL.
+      id: 97a20a7a-d43e-48ea-80ea-3ccec51c816b
+      iscommand: true
+      name: Get URL reputation from Recorded Future
+      script: Recorded Future v2|||url
+      type: regular
+      version: -1
+    taskid: 97a20a7a-d43e-48ea-80ea-3ccec51c816b
+    timertriggers: []
+    type: regular
+    view: |-
+      {
+        "position": {
+          "x": 360,
+          "y": 690
+        }
+      }
+version: -1
+view: |-
+  {
+    "linkLabelsPosition": {},
+    "paper": {
+      "dimensions": {
+        "height": 880,
+        "width": 690,
+        "x": 50,
+        "y": 50
+      }
+    }
+  }

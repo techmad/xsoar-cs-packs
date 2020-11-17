@@ -1,0 +1,103 @@
+{
+	"brands": null,
+	"defaultIncidentType": "",
+	"description": "",
+	"feed": false,
+	"fromServerVersion": "6.0.0",
+	"id": "e0bc1e9c-7878-40e0-8598-a65c563d270a",
+	"incidentSamples": null,
+	"indicatorSamples": null,
+	"instanceIds": null,
+	"itemVersion": "1.1.0",
+	"keyTypeMap": null,
+	"locked": false,
+	"logicalVersion": 0,
+	"mapping": {
+		"User Profile": {
+			"dontMapEventToLabels": true,
+			"internalMapping": {
+				" Street Address": {
+					"complex": null,
+					"simple": "streetAddress"
+				},
+				"City": {
+					"complex": null,
+					"simple": "l"
+				},
+				"Country Name": {
+					"complex": null,
+					"simple": "c"
+				},
+				"Department": {
+					"complex": null,
+					"simple": "department"
+				},
+				"Display Name": {
+					"complex": null,
+					"simple": "displayName"
+				},
+				"Email": {
+					"complex": null,
+					"simple": "mail"
+				},
+				"Employee ID": {
+					"complex": null,
+					"simple": "employeeID"
+				},
+				"Given Name": {
+					"complex": null,
+					"simple": "givenName"
+				},
+				"Mobile Phone": {
+					"complex": null,
+					"simple": "mobile"
+				},
+				"State Name": {
+					"complex": null,
+					"simple": "st"
+				},
+				"Street Address": {
+					"complex": null,
+					"simple": "streetAddress"
+				},
+				"Surname": {
+					"complex": null,
+					"simple": "sn"
+				},
+				"Title": {
+					"complex": null,
+					"simple": "title"
+				},
+				"Username": {
+					"complex": null,
+					"simple": "userPrincipalName"
+				},
+				"Work Phone": {
+					"complex": null,
+					"simple": "telephoneNumber"
+				},
+				"Zip Code": {
+					"complex": null,
+					"simple": "postalCode"
+				}
+			}
+		}
+	},
+	"name": "User Profile - Active Directory (Incoming)",
+	"nameRaw": "User Profile - Active Directory (Incoming)",
+	"packID": "Active_Directory_Query",
+	"packPropagationLabels": [
+		"all"
+	],
+	"sortValues": null,
+	"sourceClassifierId": "",
+	"system": true,
+	"toServerVersion": "",
+	"transformer": {
+		"complex": null,
+		"simple": ""
+	},
+	"type": "mapping-incoming",
+	"unclassifiedCases": null,
+	"version": -1
+}

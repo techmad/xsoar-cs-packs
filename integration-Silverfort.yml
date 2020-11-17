@@ -1,0 +1,384 @@
+category: Authentication
+commonfields:
+  id: Silverfort
+  version: -1
+configuration:
+- display: Server URL
+  name: url
+  required: true
+  type: 0
+- additionalinfo: Generate your unique API token from the tower
+  display: APIKEY
+  name: apikey
+  required: true
+  type: 4
+- display: Trust any certificate (not secure)
+  name: insecure
+  required: false
+  type: 8
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: 1.0.3
+    packID: Silverfort
+    packPropagationLabels:
+    - all
+    propagationLabels: []
+    toServerVersion: ""
+description: Use the Silverfort integration to get and update Silverfort risk severity.
+detaileddescription: "### Partner Contributed Integration\n#### Integration Author:
+  Silverfort\nSupport and maintenance for this integration are provided by the author.
+  Please use the following contact details:\n- **Email**: [support@silverfort.com](mailto:support@silverfort.com)\n-
+  **URL**: [https://support.silverfort.com/](https://support.silverfort.com/)\n***\n##
+  Silverfort Integration\n- To use this integration you need to enter the **Server
+  URL** and **API Key** parameters. \n- To generate an API token:\n    1. From the
+  Silverfort Admin Console, navigate to **Settings > Advanced**.\n    2. In the Authentication
+  Tokens section, click **Generate Token**.\n    3. Copy the generated token and save
+  it in a safe place.\n    \nFor more information, see the [Silverfort documentation](https://support.silverfort.com/hc/en-us/articles/360035867373-Silverfort-Risk-Engine-API-Reference?flash_digest=8587c2d918370791570535f5fa2d14df25498437).\n\n---\n[View
+  Integration Documentation](https://xsoar.pan.dev/docs/reference/integrations/silverfort)"
+display: Silverfort (Partner Contribution)
+image: data:image/png;base64,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
+name: Silverfort
+script:
+  commands:
+  - arguments:
+    - description: The user principal name.
+      name: upn
+    - description: The email address.
+      name: email
+    - description: The sam account.
+      name: sam_account
+    - description: The domain.
+      name: domain
+    description: User risk commands - get the user entity risk.
+    name: silverfort-get-user-risk
+    outputs:
+    - contextPath: Silverfort.UserRisk.Risk
+      description: The risk level.
+      type: String
+    - contextPath: Silverfort.UserRisk.Reasons
+      description: The reasons for the risk.
+      type: Unknown
+    - contextPath: Silverfort.UserRisk.UPN
+      description: The user principal name.
+      type: String
+  - arguments:
+    - description: The hostname.
+      name: resource_name
+      required: true
+    - description: The domain.
+      name: domain_name
+      required: true
+    description: Gets the resource entity risk information.
+    name: silverfort-get-resource-risk
+    outputs:
+    - contextPath: Silverfort.ResourceRisk.Risk
+      description: The risk level.
+      type: String
+    - contextPath: Silverfort.ResourceRisk.Reasons
+      description: The reasons for the risk.
+      type: Unknown
+    - contextPath: Silverfort.ResourceRisk.ResourceName
+      description: The hostname.
+      type: String
+  - arguments:
+    - description: The user principal name.
+      name: upn
+    - description: The risk name.
+      name: risk_name
+      required: true
+    - auto: PREDEFINED
+      description: The severity.
+      name: severity
+      predefined:
+      - low
+      - medium
+      - high
+      - critical
+      required: true
+    - description: The number of hours that the risk will be valid for.
+      name: valid_for
+      required: true
+    - description: The risk description.
+      name: description
+      required: true
+    - description: The email address.
+      name: email
+    - description: The sam account.
+      name: sam_account
+    - description: The domain.
+      name: domain
+    description: Updates the user entity risk.
+    name: silverfort-update-user-risk
+  - arguments:
+    - description: The hostname.
+      name: resource_name
+      required: true
+    - description: The domain name.
+      name: domain_name
+      required: true
+    - description: The risk name.
+      name: risk_name
+      required: true
+    - auto: PREDEFINED
+      description: The severity.
+      name: severity
+      predefined:
+      - low
+      - medium
+      - high
+      - critical
+      required: true
+    - description: The number of hours the severity will be relevant for.
+      name: valid_for
+      required: true
+    - description: A short description about the risk.
+      name: description
+      required: true
+    description: Update the resource entity risk.
+    name: silverfort-update-resource-risk
+  dockerimage: demisto/python3:3.7.4.2245
+  runonce: false
+  script: |2
+
+
+    # Disable insecure warnings
+    requests.packages.urllib3.disable_warnings()
+
+    # CONSTANTS
+    API_KEY = demisto.params().get('apikey')
+    UPDATE_REQ_RESPONSE = {'result': 'updated successfully!'}
+
+
+    class Client(BaseClient):
+        def get_status_http_request(self):
+            """
+            initiates an http request to get the service status
+            """
+            params = {'apikey': API_KEY}
+            response = self._http_request(
+                method='GET',
+                url_suffix='getBootStatus',
+                params=params
+            )
+            return response
+
+        def get_upn_by_email_or_sam_account_http_request(self, domain=None, email=None, sam_account=None):
+            """
+            initiates an http request to get the upn by email or sam account
+            """
+            params = {'apikey': API_KEY, 'domain': domain}
+            if email:
+                params['email'] = email
+            else:
+                params['sam_account'] = sam_account
+            response = self._http_request(
+                method='GET',
+                url_suffix='getUPN',
+                params=params
+            )
+            return response['user_principal_name']
+
+        def get_user_entity_risk_http_request(self, upn):
+            """
+            initiates an http request to get the user entity's risk from Silverfort DB
+            """
+            params = {'apikey': API_KEY, 'user_principal_name': upn}
+            response = self._http_request(
+                method='GET',
+                url_suffix='getEntityRisk',
+                params=params
+            )
+            return response
+
+        def get_resource_entity_risk_http_request(self, resource_name, domain_name):
+            """
+            initiates an http request to get the resource entity's risk from Silverfort DB
+            """
+            params = {'apikey': API_KEY, 'resource_name': resource_name, 'domain_name': domain_name}
+            response = self._http_request(
+                method='GET',
+                url_suffix='getEntityRisk',
+                params=params
+            )
+            return response
+
+        def update_user_entity_risk_http_request(self, upn, risks):
+            """
+            initiates an http request to update the user entity's risk in Silverfort DB
+            """
+            params = {'apikey': API_KEY}
+            data = {'user_principal_name': upn, 'risks': risks}
+            response = self._http_request(
+                method='POST',
+                url_suffix='updateEntityRisk',
+                params=params,
+                json_data=data
+            )
+            return response
+
+        def update_resource_entity_risk_http_request(self, resource_name, domain_name, risks):
+            """
+            initiates an http request to update resource entity's risk in Silverfort DB
+            """
+            params = {'apikey': API_KEY}
+            data = {'resource_name': resource_name, 'domain_name': domain_name, 'risks': risks}
+            response = self._http_request(
+                method='POST',
+                url_suffix='updateEntityRisk',
+                params=params,
+                json_data=data
+            )
+            return response
+
+
+    def create_risk_json(args):
+        try:
+            valid_for = args.get('valid_for')
+            valid_for = int(valid_for)
+        except Exception:
+            raise Exception('valid_for must be a positive number greater than 1')
+        risk_name = args.get('risk_name')
+        severity = args.get('severity')
+        description = args.get('description')
+        return {risk_name: {"severity": severity, "valid_for": valid_for, "description": description}}
+
+
+    def get_upn(client, args):
+        email = args.get('email')
+        sam_account = args.get('sam_account')
+        domain = args.get('domain')
+        return client.get_upn_by_email_or_sam_account_http_request(domain, email, sam_account)
+
+
+    def test_module(client):
+        """
+        Returning 'ok' indicates that the integration works like it is supposed to. Connection to the service is successful.
+
+        Returns:
+            'ok' if test passed, anything else will fail the test.
+        """
+        result = client.get_status_http_request()
+        if result == "True":
+            return 'ok'
+        else:
+            return 'Something went wrong with the risk api checking'
+
+
+    def get_user_entity_risk_command(client, args):
+        upn = args.get('upn')
+        if not upn:
+            upn = get_upn(client, args)
+        result = client.get_user_entity_risk_http_request(upn)
+
+        outputs = {
+            'UPN': upn,
+            'Risk': result.get('risk'),
+            'Reasons': result.get('reasons')
+        }
+        name = 'Silverfort User Risk'
+        headers = ['UPN', 'Risk', 'Reasons']
+        readable_output = tableToMarkdown(name, outputs, headers)
+
+        return (
+            readable_output,
+            {'Silverfort.UserRisk(val.UPN && val.UPN == obj.UPN)': outputs},
+            result  # raw response - the original response
+        )
+
+
+    def get_resource_entity_risk_command(client, args):
+        resource_name = args.get('resource_name')
+        domain_name = args.get('domain_name')
+        result = client.get_resource_entity_risk_http_request(resource_name, domain_name)
+
+        outputs = {
+            'ResourceName': resource_name,
+            'Risk': result.get('risk'),
+            'Reasons': result.get('reasons')
+        }
+        name = 'Silverfort Resource Risk'
+        headers = ['ResourceName', 'Risk', 'Reasons']
+        readable_output = tableToMarkdown(name, outputs, headers)
+
+        return (
+            readable_output,
+            {'Silverfort.ResourceRisk(val.ResourceName && val.ResourceName == obj.ResourceName)': outputs},
+            result  # raw response - the original response
+        )
+
+
+    def update_user_entity_risk_command(client, args):
+        upn = args.get('upn')
+        if not upn:
+            upn = get_upn(client, args)
+        risks = create_risk_json(args)
+        result = client.update_user_entity_risk_http_request(upn, risks)
+
+        if result == UPDATE_REQ_RESPONSE:
+            return "updated successfully!"
+        else:
+            return "Couldn't update the user entity's risk"
+
+
+    def update_resource_entity_risk_command(client, args):
+        resource_name = args.get('resource_name')
+        domain_name = args.get('domain_name')
+        risks = create_risk_json(args)
+        result = client.update_resource_entity_risk_http_request(resource_name, domain_name, risks)
+
+        if result == UPDATE_REQ_RESPONSE:
+            return "updated successfully!"
+        else:
+            return "Couldn't update the resource entity's risk"
+
+
+    def main():
+        """
+            PARSE AND VALIDATE INTEGRATION PARAMS
+        """
+        # get the service API url
+        base_url = urljoin(demisto.params().get('url'), '/riskapi')
+
+        verify_certificate = demisto.params().get('insecure', True)
+
+        LOG(f'Command being called is {demisto.command()}')
+        try:
+            client = Client(
+                base_url=base_url,
+                verify=verify_certificate)
+
+            if demisto.command() == 'test-module':
+                # This is the call made when pressing the integration Test button.
+                result = test_module(client)
+                demisto.results(result)
+
+            elif demisto.command() == 'silverfort-get-user-risk':
+                return_outputs(*get_user_entity_risk_command(client, demisto.args()))
+
+            elif demisto.command() == 'silverfort-get-resource-risk':
+                return_outputs(*get_resource_entity_risk_command(client, demisto.args()))
+
+            elif demisto.command() == 'silverfort-update-user-risk':
+                result = update_user_entity_risk_command(client, demisto.args())
+                demisto.results(result)
+
+            elif demisto.command() == 'silverfort-update-resource-risk':
+                result = update_resource_entity_risk_command(client, demisto.args())
+                demisto.results(result)
+        # Log exceptions
+        except Exception as e:
+            error_message = f'Failed to execute {demisto.command()} command. Error: '
+            if 'Failed to parse' in e.args[0]:
+                return_error(message=error_message + 'Verify the URL parameter is correct')
+            elif 'riskapi' not in e.args[0]:
+                return_error(message=error_message + str(e.args[0]))
+            else:
+                return_error(message=error_message + 'Something went wrong')
+
+
+    if __name__ in ('__main__', '__builtin__', 'builtins'):
+        main()
+  subtype: python3
+  type: python
+system: true

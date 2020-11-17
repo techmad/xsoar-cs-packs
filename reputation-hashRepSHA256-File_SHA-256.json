@@ -14,7 +14,7 @@
 	"formatScript": "",
 	"fromServerVersion": "5.0.0",
 	"id": "hashRepSHA256",
-	"itemVersion": "2.2.1",
+	"itemVersion": "2.2.3",
 	"layout": "",
 	"locked": false,
 	"manualMapping": null,

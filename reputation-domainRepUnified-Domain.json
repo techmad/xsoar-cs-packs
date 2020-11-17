@@ -441,7 +441,7 @@
 	"formatScript": "ExtractDomainAndFQDNFromUrlAndEmail",
 	"fromServerVersion": "5.5.0",
 	"id": "domainRepUnified",
-	"itemVersion": "2.2.1",
+	"itemVersion": "2.2.3",
 	"layout": "domainRepUnified",
 	"locked": false,
 	"manualMapping": null,

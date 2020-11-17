@@ -1,0 +1,203 @@
+args:
+- isArray: true
+  name: id
+  required: true
+- auto: PREDEFINED
+  default: true
+  defaultValue: task_times
+  description: "Automation actions. actions= provides list options. \n\nAlso Add help=true
+    to see more details on after selecting action."
+  name: command
+  predefined:
+  - task_times
+  - ' more'
+  required: true
+- default: true
+  defaultValue: "1"
+  description: 'Minimum time on task to report (default: 1 sec)'
+  name: min_secs
+- auto: PREDEFINED
+  default: true
+  defaultValue: "False"
+  description: |-
+    Filter output column key-value match
+
+    Only applies where command has this column key.
+  name: select_disabled
+  predefined:
+  - "True"
+  - "False"
+  - All
+commonfields:
+  id: d8f757fe-aaf2-4e06-b22d-95262a118224
+  version: -1
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+enabled: true
+name: playbook-stats
+pswd: ""
+runas: DBotWeakRole
+runonce: false
+script: |-
+  from datetime import datetime
+  import sys
+
+
+
+  arg_uri = demisto.getArg("uri")
+  arg_id = demisto.getArg("id")
+  arg_min_secs = demisto.getArg("min_secs")
+  arg_command = demisto.getArg("command")
+  arg_help_me = demisto.getArg("help_true")
+
+  sel_disabled = demisto.getArg("select_disabled")
+
+  demisto.log("selected: " + sel_disabled)
+
+
+  def api_post(_uri, _body):
+      response = demisto.executeCommand("demisto-api-post", {"uri": _uri, "body": _body})[0]["Contents"]["response"]
+      # TODO - Add error handing
+      return response
+
+
+  def api_get(_uri):
+      response = demisto.executeCommand("demisto-api-get", {"uri": _uri})[0]["Contents"]["response"]
+      # TODO - Add error handing
+      return response
+
+
+  def api_fetch(route, action='GET'):
+      if action == 'GET':
+          response = demisto.executeCommand("demisto-api-post", {"uri": _uri, "body": _body})[0]["Contents"]["response"]
+      # TODO - Add error handing
+      return response
+
+
+  def helper(command):
+      helper_text = {
+          'help': 'help me, help you!',
+          'tasks_time': 'This lists all playbook task times for any given Palybook ID'
+      }
+      # TODO - add markdown
+      demisto.results(helper_text[command])
+
+
+  def incident_types():
+      uri = '/incidenttype'
+      res = api_get(uri)
+
+      COLS = [
+          'name',
+          'modified',
+          'packID',
+          #'playbookId',
+          'sla',
+          'system',
+          'itemVersion',
+          'fromServerVersion',
+          'disabled',
+          #'commitMessage'
+          #'days',
+          #'daysR',
+          #'autorun'
+      ]
+
+      # what happens here?
+      SEL= {
+          sel_disabled : sel_disabled
+      }
+
+      ''' filter column outputs'''
+      table = []
+      for row in res:
+          obj = {}
+          for idx, val in enumerate(COLS):
+              if val in row:
+                  obj[val] = row[val]
+          # debug: demisto.log(row['disabled'])
+
+          ''' filter from selectors '''
+          if str(row['disabled']) == str(sel_disabled):
+              table.append(obj)
+          else:
+              table.append(obj)
+          # debug: table.append(obj)
+
+      demisto.results({
+          'Type': entryTypes["note"],
+          'Contents': table,
+          'ContentsFormat': formats["json"],
+          'HumanReadable': tableToMarkdown("Task Duration (in seconds)", table),
+          'ReadableContentsFormat': formats["markdown"]
+      })
+
+
+  def task_times(arg_id):
+      uri = '/investigation/' + arg_id + '/workplan/tasks'
+      body = {"states": ["Completed"], "types": ["condition", "regular", "playbook", "collection", "start"]}
+      response = api_post(uri, body)
+      # demisto.results(response) #loops array # TODO dump as file download link
+      taskObjs = []
+
+      for i in response:
+          if i["task"]["name"]:
+              name = i["task"]["name"]
+              type = i["task"]["type"]
+              outputs_size = sys.getsizeof(i['outputs'])
+              # parentPlaybookID = i["task"]["parentPlaybookID"]
+              completedBy = i["completedBy"]
+              outputs_len = len(i["outputs"])
+              forEachInputs_len = len(i["forEachInputs"]) if i["forEachInputs"] is not None else 0
+              subPlaybook_len = (
+                  len(i["subPlaybook"]) if i["subPlaybook"] is not None else 0) if 'subPlaybook_len' in i else 0
+
+              start = datetime.strptime(i["startDate"].partition(".")[0], "%Y-%m-%dT%H:%M:%S")
+              completed = datetime.strptime(i["completedDate"].partition(".")[0], "%Y-%m-%dT%H:%M:%S")
+              tasktime = (completed - start).seconds
+
+              taskObj = {'Time': tasktime,
+                         'Task Name': name,
+                         'completedBy': completedBy,
+                         'outputs_len': outputs_len,
+                         'forEachInputs_len': forEachInputs_len,
+                         'subPlaybook_len': subPlaybook_len,
+                         'type': type,
+                         'outputs_size' : outputs_size
+                         }
+
+              taskObj_new = {'Time': tasktime,
+                         'Task Name': name,
+                         'type': type
+                         }
+              # show in output if task took longer than time (min secs) in CLI argument
+              if int(tasktime) >= int(arg_min_secs):
+                  taskObjs.append(taskObj)
+
+      demisto.results({
+          'Type': entryTypes["note"],
+          'Contents': taskObjs,
+          'ContentsFormat': formats["json"],
+          'HumanReadable': tableToMarkdown("Task Duration (in seconds)", taskObjs),
+          'ReadableContentsFormat': formats["markdown"]
+      })
+
+
+  if arg_help_me == 'true':
+      helper(arg_command)
+  if arg_command == 'task_times':
+      task_times(arg_id)
+  if arg_command == 'incident_types':
+      incident_types()
+  else:
+      demisto.results('Command not recognised')
+scripttarget: 0
+subtype: python3
+tags: []
+type: python

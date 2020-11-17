@@ -48,7 +48,7 @@
 	"hidden": false,
 	"id": "incident_criticalassets",
 	"isReadOnly": false,
-	"itemVersion": "2.2.1",
+	"itemVersion": "2.2.3",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "Critical Assets",

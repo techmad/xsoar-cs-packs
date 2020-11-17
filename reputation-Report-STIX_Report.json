@@ -12,7 +12,7 @@
 	"formatScript": "",
 	"fromServerVersion": "5.5.0",
 	"id": "Report",
-	"itemVersion": "2.2.1",
+	"itemVersion": "2.2.3",
 	"layout": "STIX Report",
 	"locked": false,
 	"manualMapping": {},

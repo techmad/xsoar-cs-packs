@@ -15,7 +15,9 @@ name: ccs
 pswd: ""
 runas: DBotWeakRole
 runonce: false
-script: demisto.args()
+script: |-
+  demisto.args()
+  demisto.args()
 scripttarget: 0
 subtype: python3
 tags: []

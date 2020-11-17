@@ -1,0 +1,240 @@
+{
+	"contextPath": "IPv6(val.Address \u0026\u0026 val.Address === obj.Address)",
+	"contextValue": "Address",
+	"defaultMapping": {
+		"asn": {
+			"complex": {
+				"accessor": "ASN",
+				"filters": [],
+				"root": "IPv6",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"associations": {
+			"complex": {
+				"accessor": "Associations",
+				"filters": [],
+				"root": "IPv6",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"blocked": {
+			"complex": {
+				"accessor": "Blocked",
+				"filters": [],
+				"root": "IPv6",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"detectionengines": {
+			"complex": {
+				"accessor": "DetectionEngines",
+				"filters": [],
+				"root": "IPv6",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"geocountry": {
+			"complex": {
+				"accessor": "Geo.Country",
+				"filters": [],
+				"root": "IPv6",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"geolocation": {
+			"complex": {
+				"accessor": "Geo.Location",
+				"filters": [],
+				"root": "IPv6",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"hostname": {
+			"complex": {
+				"accessor": "Hostname",
+				"filters": [],
+				"root": "IPv6",
+				"transformers": []
+			},
+			"simple": ""
+		},
+		"internal": {
+			"complex": {
+				"accessor": "Internal",
+				"filters": [],
+				"root": "IPv6",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"port": {
+			"complex": {
+				"accessor": "Port",
+				"filters": [],
+				"root": "IPv6",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"positivedetections": {
+			"complex": {
+				"accessor": "PositiveDetections",
+				"filters": [],
+				"root": "IPv6",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"region": {
+			"complex": {
+				"accessor": "Region",
+				"filters": [],
+				"root": "IPv6",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"reportedby": {
+			"complex": {
+				"accessor": "ReportedBy",
+				"filters": [],
+				"root": "IPv6",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"tags": {
+			"complex": {
+				"accessor": "Tags",
+				"filters": [],
+				"root": "IPv6",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"threattypes": {
+			"complex": {
+				"accessor": "ThreatTypes",
+				"filters": [],
+				"root": "IPv6",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"trafficlightprotocol": {
+			"complex": {
+				"accessor": "TrafficLightProtocol",
+				"filters": [],
+				"root": "IPv6",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		}
+	},
+	"details": "IPv6",
+	"disabled": false,
+	"enhancementScriptNames": [],
+	"excludedBrands": [],
+	"expiration": 10080,
+	"file": false,
+	"fileHashesPriority": null,
+	"formatScript": "UnEscapeIndicatorIPv6",
+	"fromServerVersion": "5.5.0",
+	"id": "IPv6",
+	"itemVersion": "2.2.1",
+	"layout": "",
+	"locked": false,
+	"manualMapping": null,
+	"mergeContext": false,
+	"packID": "CommonTypes",
+	"packPropagationLabels": [
+		"all"
+	],
+	"propagationLabels": [],
+	"regex": "((?:^)|(?:\\(|\\s|\\[|\\-|\\'|\\\"|\\.|\\,|\\x60))((?:(?:(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4})):){6})(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4})):(?:(?:[0-9a-fA-F]{1,4})))|(?:(?:(?:(?:(?:25[0-5]|(?:[1-9]|1[0-9]|2[0-4])?[0-9]))\\.){3}(?:(?:25[0-5]|(?:[1-9]|1[0-9]|2[0-4])?[0-9])))))))|(?:(?:::(?:(?:(?:[0-9a-fA-F]{1,4})):){5})(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4})):(?:(?:[0-9a-fA-F]{1,4})))|(?:(?:(?:(?:(?:25[0-5]|(?:[1-9]|1[0-9]|2[0-4])?[0-9]))\\.){3}(?:(?:25[0-5]|(?:[1-9]|1[0-9]|2[0-4])?[0-9])))))))|(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4})))?::(?:(?:(?:[0-9a-fA-F]{1,4})):){4})(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4})):(?:(?:[0-9a-fA-F]{1,4})))|(?:(?:(?:(?:(?:25[0-5]|(?:[1-9]|1[0-9]|2[0-4])?[0-9]))\\.){3}(?:(?:25[0-5]|(?:[1-9]|1[0-9]|2[0-4])?[0-9])))))))|(?:(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4})):){0,1}(?:(?:[0-9a-fA-F]{1,4})))?::(?:(?:(?:[0-9a-fA-F]{1,4})):){3})(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4})):(?:(?:[0-9a-fA-F]{1,4})))|(?:(?:(?:(?:(?:25[0-5]|(?:[1-9]|1[0-9]|2[0-4])?[0-9]))\\.){3}(?:(?:25[0-5]|(?:[1-9]|1[0-9]|2[0-4])?[0-9])))))))|(?:(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4})):){0,2}(?:(?:[0-9a-fA-F]{1,4})))?::(?:(?:(?:[0-9a-fA-F]{1,4})):){2})(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4})):(?:(?:[0-9a-fA-F]{1,4})))|(?:(?:(?:(?:(?:25[0-5]|(?:[1-9]|1[0-9]|2[0-4])?[0-9]))\\.){3}(?:(?:25[0-5]|(?:[1-9]|1[0-9]|2[0-4])?[0-9])))))))|(?:(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4})):){0,3}(?:(?:[0-9a-fA-F]{1,4})))?::(?:(?:[0-9a-fA-F]{1,4})):)(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4})):(?:(?:[0-9a-fA-F]{1,4})))|(?:(?:(?:(?:(?:25[0-5]|(?:[1-9]|1[0-9]|2[0-4])?[0-9]))\\.){3}(?:(?:25[0-5]|(?:[1-9]|1[0-9]|2[0-4])?[0-9])))))))|(?:(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4})):){0,4}(?:(?:[0-9a-fA-F]{1,4})))?::)(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4})):(?:(?:[0-9a-fA-F]{1,4})))|(?:(?:(?:(?:(?:25[0-5]|(?:[1-9]|1[0-9]|2[0-4])?[0-9]))\\.){3}(?:(?:25[0-5]|(?:[1-9]|1[0-9]|2[0-4])?[0-9])))))))|(?:(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4})):){0,5}(?:(?:[0-9a-fA-F]{1,4})))?::)(?:(?:[0-9a-fA-F]{1,4})))|(?:(?:(?:(?:(?:(?:[0-9a-fA-F]{1,4})):){0,6}(?:(?:[0-9a-fA-F]{1,4})))?::)))))(?:\\)|$|\\s|\\]|\\-|\\\"|\\,|\\.|\\x60|\\')",
+	"reputationCommand": "ipv6",
+	"reputationScriptName": "",
+	"shouldShareComments": false,
+	"sortValues": null,
+	"system": true,
+	"toServerVersion": "",
+	"updateAfter": 0,
+	"version": -1
+}

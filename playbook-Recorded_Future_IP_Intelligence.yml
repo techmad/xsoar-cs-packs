@@ -392,7 +392,7 @@ tasks:
         address.
       id: 10952510-36d8-4785-825d-fd8b3538bc36
       iscommand: false
-      name: Is there an IP address to enrich?
+      name: Is there an IP address to get reputation of?
       type: condition
       version: -1
     taskid: 10952510-36d8-4785-825d-fd8b3538bc36
@@ -419,7 +419,7 @@ tasks:
       brand: ""
       id: ee7aa4a2-ed13-4add-8dc0-84026be9d2e3
       iscommand: false
-      name: Enrich Using Recorded Future API
+      name: Get reputation using Recorded Future API
       type: title
       version: -1
     taskid: ee7aa4a2-ed13-4add-8dc0-84026be9d2e3

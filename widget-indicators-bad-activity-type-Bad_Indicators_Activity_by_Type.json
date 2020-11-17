@@ -1,0 +1,40 @@
+{
+	"category": "",
+	"dataType": "indicators",
+	"dateRange": {
+		"fromDate": "0001-01-01T00:00:00Z",
+		"fromDateLicense": "0001-01-01T00:00:00Z",
+		"period": {
+			"by": "",
+			"byFrom": "days",
+			"byTo": "",
+			"field": "",
+			"fromValue": 7,
+			"toValue": null
+		},
+		"toDate": "0001-01-01T00:00:00Z"
+	},
+	"fromServerVersion": "5.0.0",
+	"id": "indicators-bad-activity-type",
+	"isPredefined": true,
+	"itemVersion": "1.0.5",
+	"name": "Bad Indicators Activity by Type",
+	"packID": "CommonWidgets",
+	"packPropagationLabels": [
+		"all"
+	],
+	"params": {
+		"groupBy": [
+			"calculatedTime(d)",
+			"type"
+		]
+	},
+	"propagationLabels": [],
+	"query": "reputation:bad",
+	"size": 0,
+	"sort": null,
+	"sortValues": null,
+	"toServerVersion": "",
+	"version": -1,
+	"widgetType": "line"
+}

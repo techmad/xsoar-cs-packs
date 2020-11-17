@@ -125,7 +125,7 @@
 	"formatScript": "",
 	"fromServerVersion": "5.5.0",
 	"id": "registryKey",
-	"itemVersion": "2.2.1",
+	"itemVersion": "2.2.3",
 	"layout": "registryKey",
 	"locked": false,
 	"manualMapping": null,

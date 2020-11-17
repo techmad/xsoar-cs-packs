@@ -1,0 +1,41 @@
+args:
+- default: true
+  description: The array to join if it has single element
+  isArray: true
+  name: value
+  required: true
+comment: Return the single element in case the array has only 1 element in it, otherwise
+  return the whole array
+commonfields:
+  id: JoinIfSingleElementOnly
+  version: -1
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: 1.2.80
+    packID: CommonScripts
+    packPropagationLabels:
+    - all
+    propagationLabels: []
+    toServerVersion: ""
+enabled: true
+name: JoinIfSingleElementOnly
+pswd: ""
+runas: DBotWeakRole
+runonce: false
+script: |-
+  value = demisto.args()["value"]
+  res = value
+  if isinstance(value, list):
+      if len(value)==1:
+          res = value[0]
+
+  demisto.results(res)
+scripttarget: 0
+subtype: python2
+system: true
+tags:
+- entirelist
+- transformer
+- general
+type: python

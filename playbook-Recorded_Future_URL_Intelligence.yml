@@ -370,7 +370,7 @@ tasks:
       description: Do we have a url to check
       id: 6e674458-38fe-4444-8f45-9d7a3722e1c7
       iscommand: false
-      name: Is there a URL to enrich?
+      name: Is there a URL to get reputation of?
       type: condition
       version: -1
     taskid: 6e674458-38fe-4444-8f45-9d7a3722e1c7
@@ -421,7 +421,7 @@ tasks:
       brand: ""
       id: 739989e4-4116-4083-80d1-7797ec9e9e15
       iscommand: false
-      name: Enrich using Recorded Future API
+      name: Get reputation using Recorded Future API
       type: title
       version: -1
     taskid: 739989e4-4116-4083-80d1-7797ec9e9e15

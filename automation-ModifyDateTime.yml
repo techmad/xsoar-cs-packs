@@ -1,0 +1,73 @@
+args:
+- default: true
+  description: 'Input date or time in a format that is supported by the dateparser.parse()
+    function as outlined here- https://dateparser.readthedocs.io/en/latest/#popular-formats.
+    For example: ''2020-01-01'' or ''1999/02/03 12:01:59'''
+  name: value
+  required: true
+- description: 'Variation of time (for example: ''in 1 day'', or ''3 months ago'').
+    Must be supported by the dateparser.parse() function here - https://dateparser.readthedocs.io/en/latest/#relative-dates'
+  name: variation
+  required: true
+comment: Takes a date or time input and adds or subtracts a determined amount of time.
+  Returns a string in date or time in ISO Format.
+commonfields:
+  id: ModifyDateTime
+  version: -1
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: 1.2.80
+    packID: CommonScripts
+    packPropagationLabels:
+    - all
+    propagationLabels: []
+    toServerVersion: ""
+dockerimage: demisto/python3:3.8.5.10455
+enabled: true
+name: ModifyDateTime
+pswd: ""
+runas: DBotWeakRole
+runonce: false
+script: |2
+
+
+
+
+  import dateparser
+  from typing import Optional
+
+
+  def apply_variation(original_datetime: Optional[datetime] = None, variation: str = None) -> Optional[datetime]:
+      try:
+          new_time = dateparser.parse(variation, settings={'RELATIVE_BASE': original_datetime})
+      except Exception as err:
+          return_error(f"Error adding variation to the date / time - {err}")
+      return new_time
+
+
+  def main():
+      args = demisto.args()
+      value = args.get('value')
+      try:
+          original_datetime = dateparser.parse(value)
+      except Exception as err:
+          return_error(f"Error with input date / time - {err}")
+
+      variation = args.get('variation')
+      new_time = apply_variation(original_datetime, variation)
+      if isinstance(new_time, datetime):
+          demisto.results(new_time.isoformat())
+      else:
+          return_error('Invalid variation specified')
+
+
+  if __name__ in ('__main__', 'builtin', 'builtins'):
+      main()
+scripttarget: 0
+subtype: python3
+system: true
+tags:
+- transformer
+- date
+type: python

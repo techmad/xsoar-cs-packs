@@ -181,7 +181,7 @@
 	"formatScript": "",
 	"fromServerVersion": "5.5.0",
 	"id": "IPv6CIDR",
-	"itemVersion": "2.2.1",
+	"itemVersion": "2.2.3",
 	"layout": "",
 	"locked": false,
 	"manualMapping": null,

@@ -1,0 +1,39 @@
+{
+	"category": "",
+	"dataType": "incidents",
+	"dateRange": {
+		"fromDate": "0001-01-01T00:00:00Z",
+		"fromDateLicense": "0001-01-01T00:00:00Z",
+		"period": {
+			"by": "",
+			"byFrom": "days",
+			"byTo": "",
+			"field": "",
+			"fromValue": 7,
+			"toValue": null
+		},
+		"toDate": "0001-01-01T00:00:00Z"
+	},
+	"fromServerVersion": "5.0.0",
+	"id": "top-active-playbooks",
+	"isPredefined": true,
+	"itemVersion": "1.0.5",
+	"name": "Top Active Playbooks",
+	"packID": "CommonWidgets",
+	"packPropagationLabels": [
+		"all"
+	],
+	"params": {
+		"groupBy": [
+			"playbookId"
+		]
+	},
+	"propagationLabels": [],
+	"query": "status:active -category:job",
+	"size": 5,
+	"sort": null,
+	"sortValues": null,
+	"toServerVersion": "",
+	"version": -1,
+	"widgetType": "column"
+}

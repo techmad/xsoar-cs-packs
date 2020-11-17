@@ -157,7 +157,7 @@
 	"formatScript": "",
 	"fromServerVersion": "5.5.0",
 	"id": "cveRep",
-	"itemVersion": "2.2.1",
+	"itemVersion": "2.2.3",
 	"layout": "cveRep",
 	"locked": false,
 	"manualMapping": null,

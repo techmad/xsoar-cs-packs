@@ -254,7 +254,7 @@
 	"formatScript": "UnEscapeIPs",
 	"fromServerVersion": "5.5.0",
 	"id": "ipRep",
-	"itemVersion": "2.2.1",
+	"itemVersion": "2.2.3",
 	"layout": "ipRep",
 	"locked": false,
 	"manualMapping": null,

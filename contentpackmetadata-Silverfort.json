@@ -1,0 +1,143 @@
+{
+	"author": "Silverfort",
+	"authorImage": "",
+	"beta": false,
+	"categories": [
+		"Data Enrichment \u0026 Threat Intelligence"
+	],
+	"certification": "",
+	"contentItemTypes": [
+		"integration",
+		"playbook"
+	],
+	"contentItems": {
+		"automation": null,
+		"classifier": null,
+		"dashboard": null,
+		"incidentfield": null,
+		"incidenttype": null,
+		"indicatorfield": null,
+		"integration": [
+			{
+				"category": "Authentication",
+				"commands": [
+					{
+						"description": "User risk commands - get the user entity risk.",
+						"name": "silverfort-get-user-risk"
+					},
+					{
+						"description": "Gets the resource entity risk information.",
+						"name": "silverfort-get-resource-risk"
+					},
+					{
+						"description": "Updates the user entity risk.",
+						"name": "silverfort-update-user-risk"
+					},
+					{
+						"description": "Update the resource entity risk.",
+						"name": "silverfort-update-resource-risk"
+					}
+				],
+				"description": "Use the Silverfort integration to get and update Silverfort risk severity.",
+				"name": "Silverfort (Partner Contribution)"
+			}
+		],
+		"layoutscontainer": null,
+		"playbook": [
+			{
+				"description": "This playbook gets an incident related to an account. If it is a domain admin, updates Silverfort risk.",
+				"name": "Silverfort Update Risk for Domain Admins Incidents"
+			},
+			{
+				"description": "This playbook gets the user risk from Silverfort DB. If the risk is medium or higher, the user will be blocked \u0026 alert will be sent.",
+				"name": "Silverfort Disable High Risk Account"
+			}
+		],
+		"report": null,
+		"reputation": null,
+		"widget": null
+	},
+	"created": "2020-03-17T16:09:03Z",
+	"currentVersion": "1.0.3",
+	"dependencies": {
+		"Active_Directory_Query": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.1.0",
+			"name": "Active Directory Query"
+		},
+		"Base": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.3.33",
+			"name": "Base"
+		},
+		"CommonPlaybooks": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.8.5",
+			"name": "Common Playbooks"
+		},
+		"CommonScripts": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.2.75",
+			"name": "Common Scripts"
+		}
+	},
+	"deprecated": false,
+	"description": "Silverfort protects organizations from data breaches by delivering strong authentication across entire corporate networks and cloud environments, without requiring any modifications to endpoints or servers. Using patent-pending technology, Silverfort's agentless approach enables multi-factor authentication and AI-driven adaptive authentication even for systems that don’t support it today, including proprietary systems, critical infrastructure, shared folders, IoT devices, and more. Use Silverfort integration to get \u0026 update Silverfort risk severity. This integration was integrated and tested with Silverfort version 2.12.",
+	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
+	"fromServerVersion": "5.0.0",
+	"general": [
+		"generalFieldByPartner",
+		"generalFieldFree",
+		"generalFieldSupportIncluded"
+	],
+	"id": "Silverfort",
+	"installMessage": "",
+	"integrations": [
+		{
+			"imagePath": "content/packs/Silverfort/Silverfort_image.png",
+			"name": "Silverfort (Partner Contribution)"
+		},
+		{
+			"imagePath": "content/packs/Active_Directory_Query/ActiveDirectoryQueryv2_image.png",
+			"name": "Active Directory Query v2"
+		}
+	],
+	"itemVersion": "1.0.3",
+	"keywords": [
+		"Silverfort"
+	],
+	"legacy": true,
+	"name": "Silverfort",
+	"packID": "Silverfort",
+	"premium": false,
+	"previewOnly": false,
+	"price": 0,
+	"propagationLabels": [
+		"all"
+	],
+	"rawKeywords": null,
+	"rawTags": null,
+	"rawUseCases": null,
+	"serverMaxVersion": "",
+	"serverMinVersion": "5.0.0",
+	"sortValues": null,
+	"support": "partner",
+	"supportDetails": {
+		"email": "support@silverfort.com",
+		"url": "https://support.silverfort.com/"
+	},
+	"tags": [],
+	"toServerVersion": "",
+	"updated": "2020-11-09T18:41:14Z",
+	"useCases": [],
+	"version": -1,
+	"versionInfo": "180529"
+}

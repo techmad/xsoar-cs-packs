@@ -1,7 +1,8 @@
 {
 	"associatedToAll": false,
 	"associatedTypes": [
-		"Phishing"
+		"Phishing",
+		"Email Communication"
 	],
 	"breachScript": "",
 	"caseInsensitive": false,
@@ -18,7 +19,7 @@
 	"hidden": false,
 	"id": "incident_emailbodyformat",
 	"isReadOnly": false,
-	"itemVersion": "1.10.7",
+	"itemVersion": "1.10.8",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "Email Body Format",
@@ -38,7 +39,8 @@
 	"sortValues": null,
 	"system": false,
 	"systemAssociatedTypes": [
-		"Phishing"
+		"Phishing",
+		"Email Communication"
 	],
 	"threshold": 0,
 	"toServerVersion": "",

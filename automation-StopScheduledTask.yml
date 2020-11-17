@@ -1,0 +1,35 @@
+args:
+- default: true
+  description: ID of the scheduled to stop
+  name: taskID
+  required: true
+comment: This stops the scheduled task whose ID is given in the taskID argument.
+commonfields:
+  id: StopScheduledTask
+  version: -1
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: 1.2.80
+    packID: CommonScripts
+    packPropagationLabels:
+    - all
+    propagationLabels: []
+    toServerVersion: ""
+name: StopScheduledTask
+pswd: ""
+runas: DBotWeakRole
+runonce: false
+script: |-
+  res = []
+
+  if demisto.args()['taskID']:
+      res =  demisto.executeCommand('scheduleEntry', {'id': demisto.args()['taskID'], 'cancel':'cancel'})
+
+  demisto.results(res)
+scripttarget: 0
+subtype: python2
+system: true
+tags:
+- Utility
+type: python

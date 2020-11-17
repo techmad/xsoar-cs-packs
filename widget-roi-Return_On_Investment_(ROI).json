@@ -1,0 +1,37 @@
+{
+	"category": "others",
+	"dataType": "roi",
+	"dateRange": {
+		"fromDate": "0001-01-01T00:00:00Z",
+		"fromDateLicense": "0001-01-01T00:00:00Z",
+		"period": {
+			"by": "",
+			"byFrom": "days",
+			"byTo": "",
+			"field": "",
+			"fromValue": 7,
+			"toValue": null
+		},
+		"toDate": "0001-01-01T00:00:00Z"
+	},
+	"fromServerVersion": "5.0.0",
+	"id": "roi",
+	"isPredefined": true,
+	"itemVersion": "1.0.5",
+	"name": "Return On Investment (ROI)",
+	"packID": "CommonWidgets",
+	"packPropagationLabels": [
+		"all"
+	],
+	"params": {
+		"currencySign": "$"
+	},
+	"propagationLabels": [],
+	"query": "",
+	"size": 5,
+	"sort": null,
+	"sortValues": null,
+	"toServerVersion": "",
+	"version": -1,
+	"widgetType": "number"
+}

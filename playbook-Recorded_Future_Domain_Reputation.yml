@@ -126,10 +126,10 @@ tasks:
     task:
       brand: ""
       description: Checks whether the playbook's input contains at least one domain
-        name for which to get the reputation.
+        name to enrich.
       id: 3c6fe423-8215-4bd0-8bf5-c57c35889637
       iscommand: false
-      name: Is there a domain to get reputation of?
+      name: Is there a domain to enrich?
       type: condition
       version: -1
     taskid: 3c6fe423-8215-4bd0-8bf5-c57c35889637

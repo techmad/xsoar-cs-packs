@@ -22,7 +22,7 @@
 	"hidden": false,
 	"id": "incident_regionid",
 	"isReadOnly": false,
-	"itemVersion": "2.2.1",
+	"itemVersion": "2.2.3",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "Region ID",

@@ -1,0 +1,44 @@
+args:
+- description: The value to evaluate
+  name: value
+  required: true
+- description: If value equals this
+  name: equals
+  required: true
+- description: Return this value if 'equals' is true
+  name: then
+  required: true
+- description: Return this value if 'equals' is false
+  name: else
+  required: true
+comment: A transformer for simple if-then-else logic.
+commonfields:
+  id: If-Then-Else
+  version: -1
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: 1.2.80
+    packID: CommonScripts
+    packPropagationLabels:
+    - all
+    propagationLabels: []
+    toServerVersion: ""
+enabled: true
+name: If-Then-Else
+pswd: ""
+runas: DBotWeakRole
+runonce: false
+script: |
+  const arg_value = `${args.value}`;
+  const arg_equals = `${args.equals}`;
+  const arg_then = args.then;
+  const arg_else = args.else;
+
+  return arg_value == arg_equals ? arg_then : arg_else;
+scripttarget: 0
+system: true
+tags:
+- transformer
+- general
+type: javascript

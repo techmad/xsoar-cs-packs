@@ -1,0 +1,60 @@
+{
+	"associatedToAll": false,
+	"associatedTypes": [
+		"STIX Threat Actor"
+	],
+	"breachScript": "",
+	"caseInsensitive": true,
+	"cliName": "stixsophistication",
+	"closeForm": false,
+	"columns": null,
+	"content": true,
+	"defaultRows": null,
+	"description": "",
+	"editForm": true,
+	"fieldCalcScript": "",
+	"fromServerVersion": "5.5.0",
+	"group": 2,
+	"hidden": false,
+	"id": "indicator_stixsophistication",
+	"isReadOnly": false,
+	"itemVersion": "2.2.1",
+	"locked": false,
+	"mergeStrategy": "",
+	"name": "STIX Sophistication",
+	"neverSetAsRequired": false,
+	"ownerOnly": false,
+	"packID": "CommonTypes",
+	"packPropagationLabels": [
+		"all"
+	],
+	"placeholder": "",
+	"propagationLabels": [
+		"all"
+	],
+	"required": false,
+	"runScriptAfterUpdate": false,
+	"script": "",
+	"selectValues": [
+		"none",
+		"minimal",
+		"intermediate",
+		"advanced",
+		"expert",
+		"innovator",
+		"strategic"
+	],
+	"sla": 0,
+	"sortValues": null,
+	"system": false,
+	"systemAssociatedTypes": null,
+	"threshold": 72,
+	"toServerVersion": "",
+	"type": "multiSelect",
+	"unmapped": false,
+	"unsearchable": false,
+	"useAsKpi": false,
+	"validatedError": "",
+	"validationRegex": "",
+	"version": -1
+}

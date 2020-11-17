@@ -1,7 +1,7 @@
 contentitemexportablefields:
   contentitemfields:
     fromServerVersion: ""
-    itemVersion: 1.0.5
+    itemVersion: 1.0.6
     packID: FeedAWS
     packPropagationLabels:
     - all

@@ -1,0 +1,80 @@
+{
+	"associatedToAll": false,
+	"associatedTypes": [
+		"Phishing",
+		"Malware",
+		"Access",
+		"Network"
+	],
+	"breachScript": "",
+	"caseInsensitive": true,
+	"cliName": "criticalassets",
+	"closeForm": false,
+	"columns": [
+		{
+			"displayName": "Asset Name",
+			"fieldCalcScript": "",
+			"isDefault": true,
+			"isReadOnly": false,
+			"key": "assetname",
+			"required": false,
+			"script": "",
+			"selectValues": null,
+			"type": "shortText",
+			"width": 150
+		},
+		{
+			"displayName": "Asset Type",
+			"fieldCalcScript": "",
+			"isDefault": true,
+			"isReadOnly": false,
+			"key": "assettype",
+			"required": false,
+			"script": "",
+			"selectValues": null,
+			"type": "shortText",
+			"width": 150
+		}
+	],
+	"content": true,
+	"defaultRows": [
+		{}
+	],
+	"description": "A table of critical assets involved in the incident, including the name and asset type.",
+	"editForm": true,
+	"fieldCalcScript": "",
+	"fromServerVersion": "5.0.0",
+	"group": 0,
+	"hidden": false,
+	"id": "incident_criticalassets",
+	"isReadOnly": false,
+	"itemVersion": "2.2.1",
+	"locked": false,
+	"mergeStrategy": "",
+	"name": "Critical Assets",
+	"neverSetAsRequired": false,
+	"ownerOnly": false,
+	"packID": "CommonTypes",
+	"packPropagationLabels": [
+		"all"
+	],
+	"placeholder": "",
+	"propagationLabels": [],
+	"required": false,
+	"runScriptAfterUpdate": false,
+	"script": "",
+	"selectValues": [],
+	"sla": 0,
+	"sortValues": null,
+	"system": false,
+	"systemAssociatedTypes": null,
+	"threshold": 72,
+	"toServerVersion": "",
+	"type": "grid",
+	"unmapped": false,
+	"unsearchable": false,
+	"useAsKpi": true,
+	"validatedError": "",
+	"validationRegex": "",
+	"version": -1
+}

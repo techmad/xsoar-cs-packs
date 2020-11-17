@@ -1,0 +1,340 @@
+{
+	"author": "Cortex XSOAR",
+	"authorImage": "content/packs/Base/Author_image.png",
+	"beta": false,
+	"categories": [
+		"Data Enrichment \u0026 Threat Intelligence"
+	],
+	"certification": "certified",
+	"contentItemTypes": [
+		"integration",
+		"automation",
+		"playbook",
+		"classifier"
+	],
+	"contentItems": {
+		"automation": [
+			{
+				"description": "Send an approval email to the manager of the employee with the given email allowing the manager to reply directly into the incident",
+				"name": "SendEmailToManager",
+				"tags": [
+					"communication"
+				]
+			},
+			{
+				"description": "Generates password,\nSet an AD user account with this password.\nEnable the account.\nSend mail to the user with tha account information.\nThis script is running `send-mail` command, make sure there is a matching Integration configurated.",
+				"name": "IAMInitADUser",
+				"tags": [
+					"IAM",
+					"active directory",
+					"Utility"
+				]
+			},
+			{
+				"description": "Use Active Directory to retrieve detailed information about a user account. The user can be specified by name, email or as an Active Directory Distinguished Name (DN).\nIf no filter is provided, the result will show all users.",
+				"name": "ADGetUser",
+				"tags": [
+					"active directory",
+					"enhancement",
+					"username"
+				]
+			},
+			{
+				"description": "Enhancement automation for user type indicator, to enrich the user name from Active Directory data",
+				"name": "UserEnrichAD",
+				"tags": [
+					"enhancement",
+					"active directory",
+					"user"
+				]
+			}
+		],
+		"classifier": [
+			{
+				"description": "",
+				"name": "User Profile - Active Directory (Incoming)"
+			},
+			{
+				"description": "",
+				"name": "User Profile - Active Directory (Outgoing)"
+			}
+		],
+		"dashboard": null,
+		"incidentfield": null,
+		"incidenttype": null,
+		"indicatorfield": null,
+		"integration": [
+			{
+				"category": "Data Enrichment \u0026 Threat Intelligence",
+				"commands": [
+					{
+						"description": "Expires the password of an Active Directory user.",
+						"name": "ad-expire-password"
+					},
+					{
+						"description": "Creates an Active Directory user. This command requires a secure connection (SSL,TLS).",
+						"name": "ad-create-user"
+					},
+					{
+						"description": "Runs Active Directory queries.",
+						"name": "ad-search"
+					},
+					{
+						"description": "Adds an Active Directory user or computer to a group.",
+						"name": "ad-add-to-group"
+					},
+					{
+						"description": "Removes an Active Directory user or computer from a group.",
+						"name": "ad-remove-from-group"
+					},
+					{
+						"description": "Updates attributes of an existing Active Directory user.",
+						"name": "ad-update-user"
+					},
+					{
+						"description": "Deletes an Active Directory user.",
+						"name": "ad-delete-user"
+					},
+					{
+						"description": "Creates an Active Directory contact.",
+						"name": "ad-create-contact"
+					},
+					{
+						"description": "Updates attributes of an existing Active Directory contact.",
+						"name": "ad-update-contact"
+					},
+					{
+						"description": "Disables an Active Directory user account.",
+						"name": "ad-disable-account"
+					},
+					{
+						"description": "Enables a previously disabled Active Directory account.",
+						"name": "ad-enable-account"
+					},
+					{
+						"description": "Unlocks a previously locked Active Directory user account.",
+						"name": "ad-unlock-account"
+					},
+					{
+						"description": "Sets a new password for an Active Directory user. This command requires a secure connection (SSL,TLS).",
+						"name": "ad-set-new-password"
+					},
+					{
+						"description": "Modifies the computer organizational unit within a domain.",
+						"name": "ad-modify-computer-ou"
+					},
+					{
+						"description": "Retrieves detailed information about a user account. The user can be specified by name, email address, or as an Active Directory Distinguished Name (DN). If no filter is specified, all users are returned.",
+						"name": "ad-get-user"
+					},
+					{
+						"description": "Retrieves detailed information about a computer account. The computer can be specified by name, email address, or as an Active Directory Distinguished Name (DN). If no filters are provided, all computers are returned.",
+						"name": "ad-get-computer"
+					},
+					{
+						"description": "Retrieves the list of users or computers that are members of the specified group.",
+						"name": "ad-get-group-members"
+					},
+					{
+						"description": "Creates a new security or distribution Active Directory group.",
+						"name": "ad-create-group"
+					},
+					{
+						"description": "Deletes an existing Active Directory security or distribution group.",
+						"name": "ad-delete-group"
+					},
+					{
+						"description": "Creates an Active Directory user. This command requires a secure connection (SSL,TLS).",
+						"name": "iam-create-user"
+					},
+					{
+						"description": "Retrieves a single user resource.",
+						"name": "iam-get-user"
+					},
+					{
+						"description": "Updates an existing user with the data in the User Profile indicator that is passed in the user-profile argument.",
+						"name": "iam-update-user"
+					},
+					{
+						"description": "Enables a user.",
+						"name": "iam-enable-user"
+					},
+					{
+						"description": "Disables a user.",
+						"name": "iam-disable-user"
+					},
+					{
+						"description": "Retrieves a User Profile schema which holds all of the user fields within the application. Used for outgoing-mapping through the Get Schema option.",
+						"name": "get-mapping-fields"
+					}
+				],
+				"description": "Active Directory Query integration enables you to access and manage Active Directory objects (users, contacts, and computers).",
+				"name": "Active Directory Query v2"
+			}
+		],
+		"layoutscontainer": null,
+		"playbook": [
+			{
+				"description": "Takes an email address or a username of a user account in Active Directory, and returns the email address of the user's manager.",
+				"name": "Active Directory - Get User Manager Details"
+			}
+		],
+		"report": null,
+		"reputation": null,
+		"widget": null
+	},
+	"created": "2020-03-09T14:47:00Z",
+	"currentVersion": "1.1.0",
+	"dependencies": {
+		"Base": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.3.33",
+			"name": "Base"
+		},
+		"CommonScripts": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.2.75",
+			"name": "Common Scripts"
+		},
+		"CommonTypes": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "2.2.1",
+			"name": "Common Types"
+		},
+		"EWS": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": false,
+			"minVersion": "1.4.0",
+			"name": "EWS"
+		},
+		"EWSMailSender": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": false,
+			"minVersion": "1.0.0",
+			"name": "EWS Mail Sender"
+		},
+		"Gmail": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": false,
+			"minVersion": "1.1.1",
+			"name": "Gmail"
+		},
+		"GmailSingleUser": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": false,
+			"minVersion": "1.0.2",
+			"name": "Gmail Single User (Beta)"
+		},
+		"MailSenderNew": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": false,
+			"minVersion": "1.0.1",
+			"name": "Mail Sender (New)"
+		},
+		"MicrosoftGraphListener": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": false,
+			"minVersion": "1.0.9",
+			"name": "Microsoft Graph Mail Single User"
+		},
+		"MicrosoftGraphMail": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": false,
+			"minVersion": "1.0.13",
+			"name": "Microsoft Graph Mail"
+		}
+	},
+	"deprecated": false,
+	"description": "Active Directory Query integration enables you to access and manage Active Directory objects (users, contacts, and computers).",
+	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
+	"fromServerVersion": "6.0.0",
+	"general": [
+		"generalFieldCertified",
+		"generalFieldByCortexXSOAR",
+		"generalFieldFree",
+		"generalFieldSupportIncluded"
+	],
+	"id": "Active_Directory_Query",
+	"installMessage": "",
+	"integrations": [
+		{
+			"imagePath": "content/packs/Active_Directory_Query/ActiveDirectoryQueryv2_image.png",
+			"name": "Active Directory Query v2"
+		},
+		{
+			"imagePath": "content/packs/MicrosoftGraphListener/MicrosoftGraphMailSingleUser_image.png",
+			"name": "Microsoft Graph Mail Single User"
+		},
+		{
+			"imagePath": "content/packs/Gmail/Gmail_image.png",
+			"name": "Gmail"
+		},
+		{
+			"imagePath": "content/packs/EWSMailSender/EWSMailSender_image.png",
+			"name": "EWS Mail Sender"
+		},
+		{
+			"imagePath": "content/packs/EWS/EWSv2_image.png",
+			"name": "EWS v2"
+		},
+		{
+			"imagePath": "content/packs/EWS/EWSO365_image.png",
+			"name": "EWS O365"
+		},
+		{
+			"imagePath": "content/packs/MicrosoftGraphMail/MicrosoftGraphMail_image.png",
+			"name": "Microsoft Graph Mail"
+		},
+		{
+			"imagePath": "content/packs/MailSenderNew/MailSender%28New%29_image.png",
+			"name": "Mail Sender (New)"
+		},
+		{
+			"imagePath": "content/packs/GmailSingleUser/GmailSingleUser_image.png",
+			"name": "Gmail Single User (Beta)"
+		}
+	],
+	"itemVersion": "1.1.0",
+	"keywords": [
+		"Active Directory"
+	],
+	"legacy": true,
+	"name": "Active Directory Query",
+	"packID": "Active_Directory_Query",
+	"premium": false,
+	"previewOnly": false,
+	"price": 0,
+	"propagationLabels": [
+		"all"
+	],
+	"rawKeywords": null,
+	"rawTags": null,
+	"rawUseCases": null,
+	"serverMaxVersion": "",
+	"serverMinVersion": "6.0.0",
+	"sortValues": null,
+	"support": "xsoar",
+	"supportDetails": {
+		"email": "",
+		"url": "https://www.paloaltonetworks.com/cortex"
+	},
+	"tags": [],
+	"toServerVersion": "",
+	"updated": "2020-11-09T18:42:11Z",
+	"useCases": [],
+	"version": -1,
+	"versionInfo": "180529"
+}

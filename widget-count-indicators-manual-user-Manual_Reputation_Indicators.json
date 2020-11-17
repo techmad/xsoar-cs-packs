@@ -1,0 +1,35 @@
+{
+	"category": "",
+	"dataType": "indicators",
+	"dateRange": {
+		"fromDate": "0001-01-01T00:00:00Z",
+		"fromDateLicense": "0001-01-01T00:00:00Z",
+		"period": {
+			"by": "",
+			"byFrom": "days",
+			"byTo": "",
+			"field": "",
+			"fromValue": 7,
+			"toValue": null
+		},
+		"toDate": "0001-01-01T00:00:00Z"
+	},
+	"fromServerVersion": "5.0.0",
+	"id": "count-indicators-manual-user",
+	"isPredefined": true,
+	"itemVersion": "1.0.5",
+	"name": "Manual Reputation Indicators",
+	"packID": "CommonWidgets",
+	"packPropagationLabels": [
+		"all"
+	],
+	"params": null,
+	"propagationLabels": [],
+	"query": "manualScore:T",
+	"size": 0,
+	"sort": null,
+	"sortValues": null,
+	"toServerVersion": "",
+	"version": -1,
+	"widgetType": "number"
+}

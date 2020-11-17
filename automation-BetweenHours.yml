@@ -1,0 +1,52 @@
+args:
+- description: The value to check.
+  name: value
+  required: true
+- description: The start time range in the format HH:MM:SS.
+  name: begin_time
+  required: true
+- description: The end time range in the format HH:MM:SS.
+  name: end_time
+  required: true
+comment: Checks whether the given value is within the specified time (hour) range.
+commonfields:
+  id: BetweenHours
+  version: -1
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: 1.2.80
+    packID: CommonScripts
+    packPropagationLabels:
+    - all
+    propagationLabels: []
+    toServerVersion: ""
+dockerimage: demisto/python3:3.8.2.6981
+enabled: true
+name: BetweenHours
+pswd: ""
+runas: DBotWeakRole
+runonce: false
+script: |
+  import dateparser
+
+
+
+
+  def is_between_hours(value, begin_time, end_time):
+      input_time = dateparser.parse(value).time()
+      start_time = dateparser.parse(begin_time).time()
+      end_time = dateparser.parse(end_time).time()
+
+      return start_time <= input_time <= end_time
+
+
+  if __name__ in ('__main__', '__builtin__', 'builtins'):
+      return_results(is_between_hours(**demisto.args()))
+scripttarget: 0
+subtype: python3
+system: true
+tags:
+- transformer
+- date
+type: python

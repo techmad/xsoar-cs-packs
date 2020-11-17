@@ -1,0 +1,208 @@
+{
+	"author": "Cortex XSOAR",
+	"authorImage": "",
+	"beta": false,
+	"categories": [
+		"Utilities"
+	],
+	"certification": "verified",
+	"contentItemTypes": [
+		"integration",
+		"automation",
+		"incidentfield",
+		"incidenttype",
+		"playbook",
+		"classifier",
+		"layoutscontainer"
+	],
+	"contentItems": {
+		"automation": [
+			{
+				"description": "Hello World Script",
+				"name": "HelloWorldScript",
+				"tags": [
+					"helloworld"
+				]
+			}
+		],
+		"classifier": [
+			{
+				"description": "Classifies Hello World alerts.",
+				"name": "Hello World - Classification"
+			},
+			{
+				"description": "Maps incoming Hello World alert fields.",
+				"name": "Hello World - Incoming Mapper"
+			}
+		],
+		"dashboard": null,
+		"incidentfield": [
+			{
+				"description": "",
+				"name": "Hello World Type",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Hello World ID",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Hello World Status",
+				"type": "shortText"
+			}
+		],
+		"incidenttype": [
+			{
+				"closureScript": "",
+				"days": 0,
+				"hours": 0,
+				"name": "Hello World Alert",
+				"playbook": "Handle Hello World Alert",
+				"weeks": 0
+			}
+		],
+		"indicatorfield": null,
+		"integration": [
+			{
+				"category": "Utilities",
+				"commands": [
+					{
+						"description": "Hello command - prints hello to anyone.",
+						"name": "helloworld-say-hello"
+					},
+					{
+						"description": "Search HelloWorld Alerts.",
+						"name": "helloworld-search-alerts"
+					},
+					{
+						"description": "Retrieve alert extra data by ID.",
+						"name": "helloworld-get-alert"
+					},
+					{
+						"description": "Update the status for an alert.",
+						"name": "helloworld-update-alert-status"
+					},
+					{
+						"description": "Return IP information and reputation",
+						"name": "ip"
+					},
+					{
+						"description": "Returns Domain information and reputation.",
+						"name": "domain"
+					},
+					{
+						"description": "Start scan on an asset.",
+						"name": "helloworld-scan-start"
+					},
+					{
+						"description": "Retrieve scan status for one or more scan IDs.",
+						"name": "helloworld-scan-status"
+					},
+					{
+						"description": "Retrieve scan status in Context or as a File (default) for a Scan.",
+						"name": "helloworld-scan-results"
+					}
+				],
+				"description": "This is the Hello World integration for getting started.",
+				"name": "HelloWorld (Community Contribution)"
+			}
+		],
+		"layoutscontainer": [
+			{
+				"description": "",
+				"name": "Hello World Alert"
+			}
+		],
+		"playbook": [
+			{
+				"description": "This is a playbook which will handle the alerts coming from the Hello World service",
+				"name": "Handle Hello World Alert"
+			},
+			{
+				"description": "This Playbook simulates a vulnerability scan using the \"HelloWorld\" sample integration. It's used to demonstrate how to use the GenericPolling mechanism to run jobs that take several seconds or minutes to complete. It is designed to be used as a subplaybook, but you can also use it as a standalone playbook, by providing the ${Endpoint.Hostname} input in the Context.\n\nOther inputs include the report output format (JSON context or File attached), and the Interval/Timeouts to use for polling the scan status until it's complete.",
+				"name": "HelloWorld Scan"
+			}
+		],
+		"report": null,
+		"reputation": null,
+		"widget": null
+	},
+	"created": "2020-03-10T08:37:18Z",
+	"currentVersion": "1.1.12",
+	"dependencies": {
+		"Base": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.3.33",
+			"name": "Base"
+		},
+		"CommonPlaybooks": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.8.5",
+			"name": "Common Playbooks"
+		},
+		"CommonScripts": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.2.75",
+			"name": "Common Scripts"
+		},
+		"CommonTypes": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "2.2.1",
+			"name": "Common Types"
+		}
+	},
+	"deprecated": false,
+	"description": "This is the Hello World integration for getting started.",
+	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
+	"fromServerVersion": "6.0.0",
+	"general": [
+		"generalFieldByCortexXSOAR",
+		"generalFieldFree"
+	],
+	"id": "HelloWorld",
+	"installMessage": "",
+	"integrations": [
+		{
+			"imagePath": "content/packs/HelloWorld/HelloWorld_image.png",
+			"name": "HelloWorld (Community Contribution)"
+		}
+	],
+	"itemVersion": "1.1.12",
+	"keywords": [],
+	"legacy": true,
+	"name": "HelloWorld",
+	"packID": "HelloWorld",
+	"premium": false,
+	"previewOnly": false,
+	"price": 0,
+	"propagationLabels": [
+		"all"
+	],
+	"rawKeywords": null,
+	"rawTags": null,
+	"rawUseCases": null,
+	"serverMaxVersion": "",
+	"serverMinVersion": "6.0.0",
+	"sortValues": null,
+	"support": "community",
+	"supportDetails": {
+		"email": "",
+		"url": "https://www.paloaltonetworks.com/cortex"
+	},
+	"tags": [],
+	"toServerVersion": "",
+	"updated": "2020-11-09T18:49:08Z",
+	"useCases": [],
+	"version": -1,
+	"versionInfo": "180529"
+}

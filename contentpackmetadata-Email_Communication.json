@@ -8,14 +8,17 @@
 		"automation",
 		"incidentfield",
 		"incidenttype",
+		"classifier",
 		"layoutscontainer"
 	],
 	"contentItems": {
 		"automation": [
 			{
-				"description": "Send email reply",
-				"name": "SendEmailReply",
-				"tags": []
+				"description": "Displays the original email in HTML format.",
+				"name": "DisplayEmailHtml",
+				"tags": [
+					"dynamic-section"
+				]
 			},
 			{
 				"description": "Preprocessing script for email communication layout.\nThis script checks if the incoming email contains an Incident ID to link the mail to an existing incident, and tags the email as \"email-thread\".\n\nFor more information about the preprocessing rules, refer to: https://demisto.developers.paloaltonetworks.com/docs/incidents/incident-pre-processing",
@@ -24,9 +27,31 @@
 					"email",
 					"preProcessing"
 				]
+			},
+			{
+				"description": "Send email reply",
+				"name": "SendEmailReply",
+				"tags": []
 			}
 		],
-		"classifier": null,
+		"classifier": [
+			{
+				"description": "Classifies Gmail email messages.",
+				"name": "Gmail - Classifier - Email Communication"
+			},
+			{
+				"description": "Maps incoming EWS email message fields.",
+				"name": "EWS - Incoming Mapper - Email Communication"
+			},
+			{
+				"description": "Maps incoming Gmail email message fields.",
+				"name": "Gmail - Incoming Mapper - Email Communication"
+			},
+			{
+				"description": "Classifies EWS email messages.",
+				"name": "EWS - Classifier - Email Communication"
+			}
+		],
 		"dashboard": null,
 		"incidentfield": [
 			{
@@ -59,20 +84,20 @@
 		"widget": null
 	},
 	"created": "2020-08-06T08:15:26Z",
-	"currentVersion": "1.2.2",
+	"currentVersion": "1.3.0",
 	"dependencies": {
 		"Base": {
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": true,
-			"minVersion": "1.3.33",
+			"minVersion": "1.3.38",
 			"name": "Base"
 		},
 		"CommonTypes": {
 			"author": "Cortex XSOAR",
 			"certification": "certified",
 			"mandatory": true,
-			"minVersion": "2.2.1",
+			"minVersion": "2.2.3",
 			"name": "Common Types"
 		},
 		"Phishing": {
@@ -96,7 +121,7 @@
 	"id": "EmailCommunication",
 	"installMessage": "",
 	"integrations": [],
-	"itemVersion": "1.2.2",
+	"itemVersion": "1.3.0",
 	"keywords": [],
 	"legacy": true,
 	"name": "Email Communication",
@@ -121,10 +146,10 @@
 	},
 	"tags": [],
 	"toServerVersion": "",
-	"updated": "2020-11-09T18:46:14Z",
+	"updated": "2020-11-17T15:07:26Z",
 	"useCases": [
 		"Email Communication"
 	],
 	"version": -1,
-	"versionInfo": "180529"
+	"versionInfo": "190737"
 }

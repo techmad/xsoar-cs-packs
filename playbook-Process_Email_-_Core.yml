@@ -1,7 +1,7 @@
 contentitemexportablefields:
   contentitemfields:
     fromServerVersion: ""
-    itemVersion: 1.10.7
+    itemVersion: 1.10.8
     packID: Phishing
     packPropagationLabels:
     - all
@@ -157,6 +157,8 @@ tasks:
     note: false
     quietmode: 0
     reputationcalc: 1
+    results:
+    - reportedemailentryid
     scriptarguments:
       entryid:
         complex:
@@ -237,6 +239,8 @@ tasks:
     note: false
     quietmode: 0
     reputationcalc: 2
+    results:
+    - AttachmentName
     scriptarguments:
       entryid:
         complex:

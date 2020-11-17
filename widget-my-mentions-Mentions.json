@@ -1,0 +1,35 @@
+{
+	"category": "others",
+	"dataType": "messages",
+	"dateRange": {
+		"fromDate": "0001-01-01T00:00:00Z",
+		"fromDateLicense": "0001-01-01T00:00:00Z",
+		"period": {
+			"by": "",
+			"byFrom": "days",
+			"byTo": "",
+			"field": "",
+			"fromValue": null,
+			"toValue": null
+		},
+		"toDate": "0001-01-01T00:00:00Z"
+	},
+	"fromServerVersion": "5.0.0",
+	"id": "my-mentions",
+	"isPredefined": true,
+	"itemVersion": "1.0.5",
+	"name": "Mentions",
+	"packID": "CommonWidgets",
+	"packPropagationLabels": [
+		"all"
+	],
+	"params": null,
+	"propagationLabels": [],
+	"query": "type:mention* status:=2",
+	"size": 10,
+	"sort": null,
+	"sortValues": null,
+	"toServerVersion": "",
+	"version": -1,
+	"widgetType": "list"
+}

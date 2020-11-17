@@ -1,0 +1,147 @@
+{
+	"contextPath": "",
+	"contextValue": "",
+	"defaultMapping": {
+		"associations": {
+			"complex": {
+				"accessor": "Associations",
+				"filters": [],
+				"root": "RegistryKey",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"namefield": {
+			"complex": {
+				"accessor": "Name",
+				"filters": [],
+				"root": "RegistryKey",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"path": {
+			"complex": {
+				"accessor": "Path",
+				"filters": [],
+				"root": "RegistryKey",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"registryvalue": {
+			"complex": {
+				"accessor": "Value",
+				"filters": [],
+				"root": "RegistryKey",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"reportedby": {
+			"complex": {
+				"accessor": "ReportedBy",
+				"filters": [],
+				"root": "RegistryKey",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"tags": {
+			"complex": {
+				"accessor": "Tags",
+				"filters": [],
+				"root": "RegistryKey",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"threattypes": {
+			"complex": {
+				"accessor": "ThreatTypes",
+				"filters": [],
+				"root": "RegistryKey",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"trafficlightprotocol": {
+			"complex": {
+				"accessor": "TrafficLightProtocol",
+				"filters": [],
+				"root": "RegistryKey",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		}
+	},
+	"details": "Registry Key",
+	"disabled": false,
+	"enhancementScriptNames": [],
+	"excludedBrands": [],
+	"expiration": 0,
+	"file": false,
+	"fileHashesPriority": null,
+	"formatScript": "",
+	"fromServerVersion": "5.5.0",
+	"id": "registryKey",
+	"itemVersion": "2.2.1",
+	"layout": "registryKey",
+	"locked": false,
+	"manualMapping": null,
+	"mergeContext": false,
+	"packID": "CommonTypes",
+	"packPropagationLabels": [
+		"all"
+	],
+	"propagationLabels": [],
+	"regex": "",
+	"reputationCommand": "",
+	"reputationScriptName": "",
+	"shouldShareComments": false,
+	"sortValues": null,
+	"system": true,
+	"toServerVersion": "",
+	"updateAfter": 0,
+	"version": -1
+}

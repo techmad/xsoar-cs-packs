@@ -1,0 +1,222 @@
+{
+	"author": "Cortex XSOAR",
+	"authorImage": "content/packs/Base/Author_image.png",
+	"beta": false,
+	"categories": [
+		"Utilities"
+	],
+	"certification": "certified",
+	"contentItemTypes": [
+		"automation",
+		"dashboard"
+	],
+	"contentItems": {
+		"automation": [
+			{
+				"description": "Parse Stix files to Demisto indicators",
+				"name": "StixParser",
+				"tags": [
+					"stix",
+					"ioc"
+				]
+			},
+			{
+				"description": "Predict text label using a pre-trained machine learning phishing model, and get the most important words used in the classification decision.",
+				"name": "DBotPredictPhishingWords",
+				"tags": [
+					"ml",
+					"phishing"
+				]
+			},
+			{
+				"description": "Train a machine learning text classifier.",
+				"name": "DBotTrainTextClassifierV2",
+				"tags": [
+					"ml"
+				]
+			},
+			{
+				"description": "Common code that will be merged into each PowerShell script/integration when it runs",
+				"name": "CommonServerPowerShell",
+				"tags": [
+					"infra",
+					"server"
+				]
+			},
+			{
+				"description": "Finds a threshold for ML model, and performs an evaluation based on it",
+				"name": "GetMLModelEvaluation",
+				"tags": [
+					"ml"
+				]
+			},
+			{
+				"description": "Check if a docker image is available for performing docker pull. Script simulates the docker pull flow but doesn't actually pull the image. Returns an entry with 'ok' if all is good otherwise will return an error.",
+				"name": "CheckDockerImageAvailable",
+				"tags": []
+			},
+			{
+				"description": "Pre-process text data for the machine learning text classifier.",
+				"name": "DBotPreProcessTextData",
+				"tags": [
+					"ml"
+				]
+			},
+			{
+				"description": "Gets a list of incident objects and the associated incident outputs that match the specified query and filters. The results are returned in a structured data file.",
+				"name": "GetIncidentsByQuery",
+				"tags": [
+					"ml"
+				]
+			},
+			{
+				"description": "Create a phishing classifier using machine learning technique, based on email content.",
+				"name": "DBotBuildPhishingClassifier",
+				"tags": [
+					"ml"
+				]
+			},
+			{
+				"description": "Gets a list of indicator objects and the associated indicator outputs that match the specified query and filters. The results are returned in a structured data file.",
+				"name": "GetIndicatorsByQuery",
+				"tags": [
+					"ml"
+				]
+			},
+			{
+				"description": "Common code that will be merged into each server script when it runs",
+				"name": "CommonServer",
+				"tags": [
+					"infra",
+					"server"
+				]
+			},
+			{
+				"description": "Highlight words inside a given text.",
+				"name": "HighlightWords",
+				"tags": []
+			},
+			{
+				"description": "Tokenize the words in a input text.",
+				"name": "WordTokenizerNLP",
+				"tags": [
+					"phishing",
+					"ml"
+				]
+			},
+			{
+				"description": "Deprecated. Collect telemetry data from the environment.",
+				"name": "DBotMLFetchData",
+				"tags": [
+					"ml"
+				]
+			},
+			{
+				"description": "Find similar incidents by text comparison - the algorithm based on TF-IDF method.\nTo read more about this method: https://en.wikipedia.org/wiki/Tf%E2%80%93idf\n",
+				"name": "FindSimilarIncidentsByText",
+				"tags": [
+					"ml",
+					"dedup",
+					"duplicate",
+					"incidents"
+				]
+			},
+			{
+				"description": "Deprecated. Parse Sane-json-reports and export them as docx files (used internally, thus deprecated).",
+				"name": "SaneDocReports",
+				"tags": [
+					"sane-doc-reports",
+					"sane-reports",
+					"docx"
+				]
+			},
+			{
+				"description": "Deprecated. Suggests a classifier mapping based on an advanced name matching algorithm.",
+				"name": "DBotSuggestClassifierMapping",
+				"tags": [
+					"ml"
+				]
+			},
+			{
+				"description": "Deprecated. Parse Sane-json-reports and export them as pdf files (used internally, thus deprecated).",
+				"name": "SanePdfReports",
+				"tags": [
+					"sane-pdf-reports",
+					"sane-reports",
+					"pdf"
+				]
+			},
+			{
+				"description": "Common code that will be merged into each server script when it runs.",
+				"name": "CommonServerPython",
+				"tags": [
+					"infra",
+					"server"
+				]
+			}
+		],
+		"classifier": null,
+		"dashboard": [
+			{
+				"name": "System Health"
+			}
+		],
+		"incidentfield": null,
+		"incidenttype": null,
+		"indicatorfield": null,
+		"integration": null,
+		"layoutscontainer": null,
+		"playbook": null,
+		"report": null,
+		"reputation": null,
+		"widget": null
+	},
+	"created": "2020-03-08T09:36:23Z",
+	"currentVersion": "1.3.38",
+	"dependencies": {},
+	"deprecated": false,
+	"description": "The base pack for Cortex XSOAR.",
+	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
+	"fromServerVersion": "5.5.0",
+	"general": [
+		"generalFieldCertified",
+		"generalFieldByCortexXSOAR",
+		"generalFieldFree",
+		"generalFieldSupportIncluded"
+	],
+	"id": "Base",
+	"installMessage": "",
+	"integrations": [],
+	"itemVersion": "1.3.38",
+	"keywords": [
+		"base",
+		"common"
+	],
+	"legacy": true,
+	"name": "Base",
+	"packID": "Base",
+	"premium": false,
+	"previewOnly": false,
+	"price": 0,
+	"propagationLabels": [
+		"all"
+	],
+	"rawKeywords": null,
+	"rawTags": null,
+	"rawUseCases": null,
+	"readme": "The base pack for Cortex XSOAR.",
+	"serverMaxVersion": "",
+	"serverMinVersion": "5.5.0",
+	"sortValues": null,
+	"support": "xsoar",
+	"supportDetails": {
+		"email": "",
+		"url": "https://www.paloaltonetworks.com/cortex"
+	},
+	"tags": [],
+	"toServerVersion": "",
+	"updated": "2020-11-16T14:53:04Z",
+	"useCases": [],
+	"version": -1,
+	"versionInfo": "189700"
+}

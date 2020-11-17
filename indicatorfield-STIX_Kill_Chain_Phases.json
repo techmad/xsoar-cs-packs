@@ -1,0 +1,62 @@
+{
+	"associatedToAll": false,
+	"associatedTypes": [
+		"STIX Attack Pattern",
+		"STIX Malware",
+		"STIX Tool"
+	],
+	"breachScript": "",
+	"caseInsensitive": true,
+	"cliName": "stixkillchainphases",
+	"closeForm": false,
+	"columns": null,
+	"content": true,
+	"defaultRows": null,
+	"description": "The list of Kill Chain Phases for which this object is used.",
+	"editForm": true,
+	"fieldCalcScript": "",
+	"fromServerVersion": "5.5.0",
+	"group": 2,
+	"hidden": false,
+	"id": "indicator_stixkillchainphases",
+	"isReadOnly": false,
+	"itemVersion": "2.2.1",
+	"locked": false,
+	"mergeStrategy": "",
+	"name": "STIX Kill Chain Phases",
+	"neverSetAsRequired": false,
+	"ownerOnly": false,
+	"packID": "CommonTypes",
+	"packPropagationLabels": [
+		"all"
+	],
+	"placeholder": "",
+	"propagationLabels": [
+		"all"
+	],
+	"required": false,
+	"runScriptAfterUpdate": false,
+	"script": "",
+	"selectValues": [
+		"Reconnaissance",
+		"Weaponization",
+		"Delivery",
+		"Exploitation",
+		"Installation",
+		"Command \u0026 Control",
+		"Actions on Objectives"
+	],
+	"sla": 0,
+	"sortValues": null,
+	"system": false,
+	"systemAssociatedTypes": null,
+	"threshold": 72,
+	"toServerVersion": "",
+	"type": "multiSelect",
+	"unmapped": false,
+	"unsearchable": false,
+	"useAsKpi": false,
+	"validatedError": "",
+	"validationRegex": "",
+	"version": -1
+}

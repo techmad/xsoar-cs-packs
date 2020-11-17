@@ -1,0 +1,30 @@
+args:
+- default: true
+  description: Amount of seconds to sleep
+  name: seconds
+  required: true
+comment: Sleep for X seconds
+commonfields:
+  id: Sleep
+  version: -1
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: 1.2.80
+    packID: CommonScripts
+    packPropagationLabels:
+    - all
+    propagationLabels: []
+    toServerVersion: ""
+enabled: true
+name: Sleep
+pswd: ""
+runas: DBotWeakRole
+runonce: false
+script: wait(parseInt(args.seconds));
+scripttarget: 0
+system: true
+tags:
+- Utility
+timeout: 1h40m0s
+type: javascript

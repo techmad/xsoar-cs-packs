@@ -18,7 +18,7 @@
 	"hidden": false,
 	"id": "incident_emailkeywords",
 	"isReadOnly": false,
-	"itemVersion": "1.10.7",
+	"itemVersion": "1.10.8",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "Email Keywords",

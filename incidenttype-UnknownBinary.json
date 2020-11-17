@@ -1,0 +1,37 @@
+{
+	"autorun": false,
+	"closureScript": "",
+	"color": "#FE2CD6",
+	"days": 3,
+	"daysR": 0,
+	"default": false,
+	"detached": false,
+	"disabled": false,
+	"extractSettings": {
+		"fieldCliNameToExtractSettings": null
+	},
+	"fromServerVersion": "6.0.0",
+	"hours": 0,
+	"hoursR": 0,
+	"id": "UnknownBinary",
+	"itemVersion": "2.2.1",
+	"layout": "",
+	"locked": false,
+	"name": "UnknownBinary",
+	"onChangeRepAlg": 0,
+	"packID": "CommonTypes",
+	"packPropagationLabels": [
+		"all"
+	],
+	"preProcessingScript": "",
+	"propagationLabels": [],
+	"readonly": false,
+	"reputationCalc": 0,
+	"sla": 240,
+	"sortValues": null,
+	"system": true,
+	"toServerVersion": "",
+	"version": -1,
+	"weeks": 1,
+	"weeksR": 0
+}

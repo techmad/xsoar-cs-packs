@@ -1,0 +1,159 @@
+{
+	"author": "Cortex XSOAR",
+	"authorImage": "content/packs/Base/Author_image.png",
+	"beta": false,
+	"categories": [
+		"Utilities"
+	],
+	"certification": "certified",
+	"contentItemTypes": [
+		"report"
+	],
+	"contentItems": {
+		"automation": null,
+		"classifier": null,
+		"dashboard": null,
+		"incidentfield": null,
+		"incidenttype": null,
+		"indicatorfield": null,
+		"integration": null,
+		"layoutscontainer": null,
+		"playbook": null,
+		"report": [
+			{
+				"description": "All closed incidents in the last 30 days. Counts of types, severity, SLAs and analysts work, and a list of all closed incidents.",
+				"name": "Last 30 days closed incidents"
+			},
+			{
+				"description": "Last 30 days summary of incidents statistics, followed by a list of all current open incidents.",
+				"name": "Last 30 days incidents"
+			},
+			{
+				"description": "A summary report that contains various details such as evidence and investigation time line, investigation team, statistics and more",
+				"name": "Investigation Summary"
+			},
+			{
+				"description": "All critical and high severity incidents that may need the analyst attention.",
+				"name": "Critical and High incidents"
+			},
+			{
+				"description": "This report generates Mean Time to Resolve by Incident Owner for last 2 Quarters",
+				"name": "Mean time to Resolve by Incident Owner (Last 2 Quarters)"
+			},
+			{
+				"description": "Shift summary which includes the last 6 hours open and closed incidents.",
+				"name": "Shift summary report"
+			},
+			{
+				"description": "A summary report that contains various details such as evidence and investigation time line, investigation team, statistics and more",
+				"name": "Investigation Summary"
+			},
+			{
+				"description": "Report about all unknown severity incidents that may need the analyst attention.",
+				"name": "Unknown severity incidents"
+			},
+			{
+				"description": "List and statistics of the current open incidents including type and severity distribution and SLA compliance.",
+				"name": "Open Incidents"
+			},
+			{
+				"description": "Last 7 days summary of incidents statistics, followed by a list of all current open incidents.",
+				"name": "Last 7 days incidents"
+			},
+			{
+				"description": "Daily summary of incidents statistics, followed by a list of all current open incidents.",
+				"name": "Daily incidents"
+			},
+			{
+				"description": "List and statistics of the current open incidents including type and severity distribution and SLA compliance.",
+				"name": "Open Incidents"
+			},
+			{
+				"description": "Last 24 hours summary of incidents statistics, followed by a list of all current open incidents.",
+				"name": "Last 24 hours incidents"
+			},
+			{
+				"description": "Daily summary of all current open incidents (CSV format).",
+				"name": "Daily incidents"
+			},
+			{
+				"description": "All critical and high severity incidents that may need the analyst attention.",
+				"name": "Critical and High incidents"
+			},
+			{
+				"description": "All closed incidents in the last 7 days. Counts of types, severity, SLAs and analysts work, and a list of all closed incidents.",
+				"name": "Last 7 days closed incidents"
+			},
+			{
+				"description": "This report generates Mean Time to Resolve by Incident type for last 2 Quarters",
+				"name": "Mean time to Resolve by Incident Type (Last 2 Quarters)"
+			},
+			{
+				"description": "All closed incidents in the last 24 hours. Counts of types, severity, SLAs and analysts work, and a list of all closed incidents.",
+				"name": "Last 24 hours closed incidents"
+			},
+			{
+				"description": "All the incidents that passed their SLA due date and the incidents that are at risk to soon pass their SLA.",
+				"name": "Late Incidents"
+			},
+			{
+				"description": "Daily summary of incidents statistics, followed by a list of all current open incidents.",
+				"name": "Daily incidents"
+			}
+		],
+		"reputation": null,
+		"widget": null
+	},
+	"created": "2020-05-26T08:19:18Z",
+	"currentVersion": "1.0.1",
+	"dependencies": {
+		"Base": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.3.33",
+			"name": "Base"
+		}
+	},
+	"deprecated": false,
+	"description": "Frequently used reports pack.",
+	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
+	"fromServerVersion": "5.0.0",
+	"general": [
+		"generalFieldCertified",
+		"generalFieldByCortexXSOAR",
+		"generalFieldFree",
+		"generalFieldSupportIncluded"
+	],
+	"id": "CommonReports",
+	"installMessage": "",
+	"integrations": [],
+	"itemVersion": "1.0.1",
+	"keywords": [],
+	"legacy": true,
+	"name": "Common Reports",
+	"packID": "CommonReports",
+	"premium": false,
+	"previewOnly": false,
+	"price": 0,
+	"propagationLabels": [
+		"all"
+	],
+	"rawKeywords": null,
+	"rawTags": null,
+	"rawUseCases": null,
+	"serverMaxVersion": "",
+	"serverMinVersion": "5.0.0",
+	"sortValues": null,
+	"support": "xsoar",
+	"supportDetails": {
+		"email": "",
+		"url": "https://www.paloaltonetworks.com/cortex"
+	},
+	"tags": [],
+	"toServerVersion": "",
+	"updated": "2020-11-09T18:46:54Z",
+	"useCases": [],
+	"version": -1,
+	"versionInfo": "180529"
+}

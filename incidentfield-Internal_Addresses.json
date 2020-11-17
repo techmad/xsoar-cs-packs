@@ -18,7 +18,7 @@
 	"hidden": false,
 	"id": "incident_internaladdresses",
 	"isReadOnly": false,
-	"itemVersion": "2.2.1",
+	"itemVersion": "2.2.3",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "Internal Addresses",

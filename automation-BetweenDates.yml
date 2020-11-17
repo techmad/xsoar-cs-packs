@@ -1,0 +1,52 @@
+args:
+- description: Value to check
+  name: value
+  required: true
+- description: Lower date range
+  name: begin_date
+  required: true
+- description: Upper date range
+  name: end_date
+  required: true
+comment: Whether value is within a date range.
+commonfields:
+  id: BetweenDates
+  version: -1
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: 1.2.80
+    packID: CommonScripts
+    packPropagationLabels:
+    - all
+    propagationLabels: []
+    toServerVersion: ""
+dockerimage: demisto/python3:3.8.2.6981
+enabled: true
+name: BetweenDates
+pswd: ""
+runas: DBotWeakRole
+runonce: false
+script: |
+  import dateparser
+
+
+
+
+  def is_between_dates(value, begin_date, end_date):
+      input_time = dateparser.parse(value)
+      start_time = dateparser.parse(begin_date)
+      end_time = dateparser.parse(end_date)
+
+      return start_time <= input_time <= end_time
+
+
+  if __name__ in ('__main__', '__builtin__', 'builtins'):
+      return_results(is_between_dates(**demisto.args()))
+scripttarget: 0
+subtype: python3
+system: true
+tags:
+- transformer
+- date
+type: python

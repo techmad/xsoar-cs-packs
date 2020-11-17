@@ -1,0 +1,35 @@
+{
+	"brands": null,
+	"defaultIncidentType": "",
+	"description": "Classifies AWS IOCs.",
+	"feed": true,
+	"fromServerVersion": "6.0.0",
+	"id": "AWS Feed Classifier",
+	"incidentSamples": null,
+	"indicatorSamples": null,
+	"instanceIds": null,
+	"itemVersion": "1.0.6",
+	"keyTypeMap": {
+		"CIDR": "CIDR"
+	},
+	"locked": false,
+	"logicalVersion": 0,
+	"mapping": null,
+	"name": "AWS Feed - Classifier",
+	"nameRaw": "AWS Feed - Classifier",
+	"packID": "FeedAWS",
+	"packPropagationLabels": [
+		"all"
+	],
+	"sortValues": null,
+	"sourceClassifierId": "",
+	"system": true,
+	"toServerVersion": "",
+	"transformer": {
+		"complex": null,
+		"simple": "type"
+	},
+	"type": "classification",
+	"unclassifiedCases": null,
+	"version": -1
+}

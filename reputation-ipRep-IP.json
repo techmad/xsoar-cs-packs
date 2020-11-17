@@ -1,0 +1,276 @@
+{
+	"contextPath": "IP(val.Address \u0026\u0026 val.Address === obj.Address)",
+	"contextValue": "Address",
+	"defaultMapping": {
+		"asn": {
+			"complex": {
+				"accessor": "ASN",
+				"filters": [],
+				"root": "IP",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"associations": {
+			"complex": {
+				"accessor": "Associations",
+				"filters": [],
+				"root": "IP",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"blocked": {
+			"complex": {
+				"accessor": "Blocked",
+				"filters": [],
+				"root": "IP",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"detectionengines": {
+			"complex": {
+				"accessor": "DetectionEngines",
+				"filters": [],
+				"root": "IP",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"geocountry": {
+			"complex": {
+				"accessor": "Geo.Country",
+				"filters": [],
+				"root": "IP",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"geolocation": {
+			"complex": {
+				"accessor": "Geo.Location",
+				"filters": [],
+				"root": "IP",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"hostname": {
+			"complex": {
+				"accessor": "Hostname",
+				"filters": [],
+				"root": "IP",
+				"transformers": []
+			},
+			"simple": ""
+		},
+		"internal": {
+			"complex": {
+				"accessor": "Address",
+				"filters": [
+					[
+						{
+							"ignoreCase": false,
+							"left": {
+								"isContext": true,
+								"value": {
+									"complex": null,
+									"simple": "IP.Address"
+								}
+							},
+							"operator": "IsInCidrRanges",
+							"right": {
+								"isContext": false,
+								"value": {
+									"complex": null,
+									"simple": "192.168.0.0/16,172.16.0.0/12,10.0.0.0/8,127.0.0.0/8,169.254.0.0/16"
+								}
+							}
+						}
+					]
+				],
+				"root": "IP",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					},
+					{
+						"args": {
+							"dt": {
+								"isContext": false,
+								"value": {
+									"complex": null,
+									"simple": ".=Boolean(val)"
+								}
+							}
+						},
+						"operator": "DT"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"port": {
+			"complex": {
+				"accessor": "Port",
+				"filters": [],
+				"root": "IP",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"positivedetections": {
+			"complex": {
+				"accessor": "PositiveDetections",
+				"filters": [],
+				"root": "IP",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"region": {
+			"complex": {
+				"accessor": "Region",
+				"filters": [],
+				"root": "IP",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"reportedby": {
+			"complex": {
+				"accessor": "ReportedBy",
+				"filters": [],
+				"root": "IP",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"tags": {
+			"complex": {
+				"accessor": "Tags",
+				"filters": [],
+				"root": "IP",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"threattypes": {
+			"complex": {
+				"accessor": "ThreatTypes",
+				"filters": [],
+				"root": "IP",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		},
+		"trafficlightprotocol": {
+			"complex": {
+				"accessor": "TrafficLightProtocol",
+				"filters": [],
+				"root": "IP",
+				"transformers": [
+					{
+						"args": {},
+						"operator": "uniq"
+					}
+				]
+			},
+			"simple": ""
+		}
+	},
+	"details": "IP",
+	"disabled": false,
+	"enhancementScriptNames": [
+		"IPReputation",
+		"SplunkPySearch"
+	],
+	"excludedBrands": [],
+	"expiration": 10080,
+	"file": false,
+	"fileHashesPriority": null,
+	"formatScript": "UnEscapeIPs",
+	"fromServerVersion": "5.5.0",
+	"id": "ipRep",
+	"itemVersion": "2.2.1",
+	"layout": "ipRep",
+	"locked": false,
+	"manualMapping": null,
+	"mergeContext": false,
+	"packID": "CommonTypes",
+	"packPropagationLabels": [
+		"all"
+	],
+	"propagationLabels": [],
+	"regex": "\\b(?:(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])(?:\\[\\.\\]|\\.)){3}(?:25[0-5]|2[0-4][0-9]|1[0-9][0-9]|[1-9]?[0-9])\\b",
+	"reputationCommand": "ip",
+	"reputationScriptName": "",
+	"shouldShareComments": false,
+	"sortValues": null,
+	"system": true,
+	"toServerVersion": "",
+	"updateAfter": 0,
+	"version": -1
+}

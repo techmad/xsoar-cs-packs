@@ -1,0 +1,22 @@
+commonfields:
+  id: d2c922a0-5cbc-47eb-8e11-36f225a8044e
+  version: -1
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: ""
+    packID: ""
+    propagationLabels:
+    - all
+    toServerVersion: ""
+dockerimage: demisto/python3:3.8.6.13358
+enabled: true
+name: ccs
+pswd: ""
+runas: DBotWeakRole
+runonce: false
+script: demisto.args()
+scripttarget: 0
+subtype: python3
+tags: []
+type: python

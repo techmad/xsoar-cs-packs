@@ -18,6 +18,7 @@ runonce: false
 script: |-
   demisto.args()
   demisto.args()
+  demisto.args()
 scripttarget: 0
 subtype: python3
 tags: []

@@ -1,0 +1,62 @@
+args:
+- description: Date value to check - Can be any non-timezone aware time format. ex.
+    "2020-01-01T00:00:00"
+  name: left
+  required: true
+- description: Relative time ex. "6 months ago"
+  name: right
+  required: true
+comment: Checks the given datetime has occured after the provided relative time.
+commonfields:
+  id: AfterRelativeDate
+  version: -1
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: 1.2.80
+    packID: CommonScripts
+    packPropagationLabels:
+    - all
+    propagationLabels: []
+    toServerVersion: ""
+dockerimage: demisto/python3:3.8.6.12176
+enabled: true
+name: AfterRelativeDate
+pswd: ""
+runas: DBotWeakRole
+runonce: false
+script: |2
+
+
+
+  import dateparser
+
+
+  def check_date(value, relative_date):
+      v = dateparser.parse(value)
+      da = dateparser.parse(relative_date)
+      if v > da:
+          return True
+      else:
+          return False
+
+
+  def main():
+      value = demisto.args().get('left')
+      if isinstance(value, list):
+          value = demisto.args().get('left')[0]
+
+      relative_date = demisto.args().get('right')
+      return_results(check_date(value, relative_date))
+
+
+  if __name__ in ('__builtin__', 'builtins', '__main__'):
+      main()
+scripttarget: 0
+subtype: python3
+system: true
+tags:
+- date
+- filter
+- Condition
+type: python

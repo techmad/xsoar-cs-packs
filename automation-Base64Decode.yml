@@ -1,0 +1,63 @@
+args:
+- default: true
+  description: The value to decode in Base64 format.
+  name: value
+  required: true
+comment: Decodes an input in Base64 format.
+commonfields:
+  id: Base64Decode
+  version: -1
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: 1.2.80
+    packID: CommonScripts
+    packPropagationLabels:
+    - all
+    propagationLabels: []
+    toServerVersion: ""
+enabled: true
+name: Base64Decode
+outputs:
+- contextPath: Base64.decoded
+  description: The decoded output in Base64 format.
+  type: string
+- contextPath: Base64.originalValue
+  description: The passed value that was decoded.
+  type: string
+pswd: ""
+runas: DBotWeakRole
+runonce: false
+script: |2
+
+
+
+  import base64
+
+
+  def decode(value):
+      decoded_bytes = base64.urlsafe_b64decode(str(value))
+      res = str(decoded_bytes)
+
+      outputs = {
+          "Base64":
+              {
+                  "originalValue": value,
+                  "decoded": res
+              }
+      }
+
+      return res, outputs
+
+
+  if __name__ in ('builtins', '__builtin__'):
+      value = demisto.args()["value"]
+      return_outputs(*decode(value))
+scripttarget: 0
+subtype: python3
+system: true
+tags:
+- Utility
+- transformer
+- string
+type: python

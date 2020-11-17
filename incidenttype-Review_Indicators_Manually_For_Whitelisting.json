@@ -1,0 +1,37 @@
+{
+	"autorun": true,
+	"closureScript": "",
+	"color": "#4CAF50",
+	"days": 0,
+	"daysR": 0,
+	"default": false,
+	"detached": false,
+	"disabled": false,
+	"extractSettings": {
+		"fieldCliNameToExtractSettings": null
+	},
+	"fromServerVersion": "5.5.0",
+	"hours": 0,
+	"hoursR": 0,
+	"id": "Review Indicators Manually For Whitelisting",
+	"itemVersion": "1.1.6",
+	"layout": "Review Indicators Manually For Whitelisting",
+	"locked": false,
+	"name": "Review Indicators Manually For Whitelisting",
+	"onChangeRepAlg": 0,
+	"packID": "TIM_Processing",
+	"packPropagationLabels": [
+		"all"
+	],
+	"playbookId": "TIM - Review Indicators Manually For Whitelisting",
+	"preProcessingScript": "",
+	"propagationLabels": [],
+	"readonly": false,
+	"reputationCalc": 0,
+	"sortValues": null,
+	"system": true,
+	"toServerVersion": "",
+	"version": -1,
+	"weeks": 0,
+	"weeksR": 0
+}

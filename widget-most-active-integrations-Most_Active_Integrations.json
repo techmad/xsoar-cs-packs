@@ -1,0 +1,39 @@
+{
+	"category": "others",
+	"dataType": "entries",
+	"dateRange": {
+		"fromDate": "0001-01-01T00:00:00Z",
+		"fromDateLicense": "0001-01-01T00:00:00Z",
+		"period": {
+			"by": "",
+			"byFrom": "days",
+			"byTo": "",
+			"field": "",
+			"fromValue": 7,
+			"toValue": null
+		},
+		"toDate": "0001-01-01T00:00:00Z"
+	},
+	"fromServerVersion": "5.0.0",
+	"id": "most-active-integrations",
+	"isPredefined": true,
+	"itemVersion": "1.0.5",
+	"name": "Most Active Integrations",
+	"packID": "CommonWidgets",
+	"packPropagationLabels": [
+		"all"
+	],
+	"params": {
+		"groupBy": [
+			"brand"
+		]
+	},
+	"propagationLabels": [],
+	"query": "-brand:Builtin and -brand:Service and -brand:none and -category:text",
+	"size": 5,
+	"sort": null,
+	"sortValues": null,
+	"toServerVersion": "",
+	"version": -1,
+	"widgetType": "bar"
+}

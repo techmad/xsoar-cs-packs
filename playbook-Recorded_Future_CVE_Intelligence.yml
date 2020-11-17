@@ -332,11 +332,11 @@ tasks:
     skipunavailable: false
     task:
       brand: ""
-      description: Checks whether the playbook's input contains at least one CVE.
-        to enrich.
+      description: Checks whether the playbook's input contains at least one domain
+        name for which to retrieve the reputation.
       id: 2b22eb54-802e-4d08-88da-3435a0e282da
       iscommand: false
-      name: Is there a CVE ID to enrich?
+      name: Is there a CVE ID to get reputation of?
       type: condition
       version: -1
     taskid: 2b22eb54-802e-4d08-88da-3435a0e282da
@@ -486,7 +486,7 @@ tasks:
       brand: ""
       id: 8075d9ed-0723-4435-8018-09dc88e18081
       iscommand: false
-      name: Enrich Using Recorded Future API
+      name: Get reputation using Recorded Future API
       type: title
       version: -1
     taskid: 8075d9ed-0723-4435-8018-09dc88e18081

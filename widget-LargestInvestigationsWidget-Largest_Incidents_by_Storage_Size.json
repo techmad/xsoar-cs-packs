@@ -1,0 +1,35 @@
+{
+	"category": "",
+	"dataType": "scripts",
+	"dateRange": {
+		"fromDate": "0001-01-01T00:00:00Z",
+		"fromDateLicense": "0001-01-01T00:00:00Z",
+		"period": {
+			"by": "",
+			"byFrom": "calendarMonths",
+			"byTo": "",
+			"field": "",
+			"fromValue": 0,
+			"toValue": null
+		},
+		"toDate": "0001-01-01T00:00:00Z"
+	},
+	"fromServerVersion": "6.0.0",
+	"id": "LargestInvestigationsWidget",
+	"isPredefined": true,
+	"itemVersion": "1.0.5",
+	"name": "Largest Incidents by Storage Size",
+	"packID": "CommonWidgets",
+	"packPropagationLabels": [
+		"all"
+	],
+	"params": null,
+	"propagationLabels": [],
+	"query": "GetLargestInvestigations",
+	"size": 0,
+	"sort": null,
+	"sortValues": null,
+	"toServerVersion": "",
+	"version": -1,
+	"widgetType": "text"
+}

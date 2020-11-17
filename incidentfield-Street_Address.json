@@ -23,7 +23,7 @@
 	"hidden": false,
 	"id": "incident_streetaddress",
 	"isReadOnly": false,
-	"itemVersion": "2.2.1",
+	"itemVersion": "2.2.3",
 	"locked": false,
 	"mergeStrategy": "",
 	"name": "Street Address",

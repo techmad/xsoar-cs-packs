@@ -170,7 +170,7 @@
 	"formatScript": "UnEscapeURLs",
 	"fromServerVersion": "5.5.0",
 	"id": "urlRep",
-	"itemVersion": "2.2.1",
+	"itemVersion": "2.2.3",
 	"layout": "urlRep",
 	"locked": false,
 	"manualMapping": null,

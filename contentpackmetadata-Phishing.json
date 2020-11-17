@@ -1,0 +1,457 @@
+{
+	"author": "Cortex XSOAR",
+	"authorImage": "content/packs/Base/Author_image.png",
+	"beta": false,
+	"categories": [
+		"Messaging"
+	],
+	"certification": "certified",
+	"contentItemTypes": [
+		"automation",
+		"incidentfield",
+		"incidenttype",
+		"playbook",
+		"layoutscontainer"
+	],
+	"contentItems": {
+		"automation": [
+			{
+				"description": "An out-of-the-box deduplication preprocessing script based on a machine learning algorithm.",
+				"name": "PhishingDedupPreprocessingRule",
+				"tags": [
+					"ml",
+					"phishing"
+				]
+			},
+			{
+				"description": "Checks the authenticity of an email based on the email's SPF, DMARC, and DKIM.",
+				"name": "CheckEmailAuthenticity",
+				"tags": [
+					"phishing",
+					"ews",
+					"email"
+				]
+			}
+		],
+		"classifier": null,
+		"dashboard": null,
+		"incidentfield": [
+			{
+				"description": "",
+				"name": "Email Source",
+				"type": "shortText"
+			},
+			{
+				"description": "A list of all of the email headers.",
+				"name": "Email Headers",
+				"type": "grid"
+			},
+			{
+				"description": "",
+				"name": "Attachment Count",
+				"type": "number"
+			},
+			{
+				"description": "",
+				"name": "Attachment type",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Email BCC",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Email Sender IP",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Email Client Name",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Attachment Hash",
+				"type": "shortText"
+			},
+			{
+				"description": "Phishing incident sub-type. Can be \"Spear Phishing\", \"Whaling\", \"Credential Harvesting\", \"Malware\", \"Scam\", or \"Automatic\".",
+				"name": "Phishing Sub-type",
+				"type": "multiSelect"
+			},
+			{
+				"description": "",
+				"name": "Email Reply To",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Email HTML",
+				"type": "longText"
+			},
+			{
+				"description": "Indicates the authenticity of the email. This check is done using the CheckEmailAuthenticity script.",
+				"name": "Email Authenticity Check",
+				"type": "singleSelect"
+			},
+			{
+				"description": "",
+				"name": "Email Body Format",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Email Body HTML",
+				"type": "html"
+			},
+			{
+				"description": "",
+				"name": "Email From",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Email Keywords",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Email To",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Attachment size",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Email Return Path",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Email Subject",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Email Message ID",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Attachment Extension",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Email Body",
+				"type": "longText"
+			},
+			{
+				"description": "",
+				"name": "Email Size",
+				"type": "number"
+			},
+			{
+				"description": "",
+				"name": "Attachment Name",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Attachment ID",
+				"type": "shortText"
+			},
+			{
+				"description": "The confidence level, presented as a value between 0 and 1, of the predicted phishing sub-type verdict by the machine-learning model.",
+				"name": "DBotPredictionProbability",
+				"type": "number"
+			},
+			{
+				"description": "",
+				"name": "Email URL Clicked",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Email CC",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Email To Count",
+				"type": "shortText"
+			},
+			{
+				"description": "",
+				"name": "Email Received",
+				"type": "shortText"
+			},
+			{
+				"description": "Indicates the words in the text that contributed to the decision made by the machine-learning model.",
+				"name": "DBotTextSuggestionHighlighted",
+				"type": "markdown"
+			},
+			{
+				"description": "The email address of the user who reported the email.",
+				"name": "Reporter Email Address",
+				"type": "shortText"
+			},
+			{
+				"description": "The phishing sub-type verdict that was predicted by the machine-learning model.",
+				"name": "DBotPrediction",
+				"type": "shortText"
+			},
+			{
+				"description": "Classification of the email. Can be \"Legitimate\", \"Spam\", or \"Malicious\".",
+				"name": "Email Classification",
+				"type": "singleSelect"
+			},
+			{
+				"description": "The mail to whom you reply",
+				"name": "Email In Reply To",
+				"type": "shortText"
+			}
+		],
+		"incidenttype": [
+			{
+				"closureScript": "",
+				"days": 3,
+				"hours": 0,
+				"name": "Phishing",
+				"playbook": "playbook2",
+				"weeks": 1
+			}
+		],
+		"indicatorfield": null,
+		"integration": null,
+		"layoutscontainer": [
+			{
+				"description": "",
+				"name": "Phishing Incident"
+			}
+		],
+		"playbook": [
+			{
+				"description": "Use this playbook to investigate and remediate a potential phishing incident. The playbook simultaneously engages with the user that triggered the incident, while investigating the incident itself.\n\nThe final remediation tasks are always decided by a human analyst.",
+				"name": "Phishing Investigation - Generic v2"
+			},
+			{
+				"description": "Provides a basic response to phishing incidents. Playbook features:\n- Calculates reputation for all indicators\n- Extracts indicators from email attachments\n- Calculates severity for the incident based on indicator reputation\n- Updates reporting user about investigation status\n- Allows manual remediation of the incident",
+				"name": "Phishing - Core"
+			},
+			{
+				"description": "Add email details to the relevant context entities and handle the case where original emails are attached.",
+				"name": "Process Email - Generic"
+			},
+			{
+				"description": "Enrich entities using one or more integrations",
+				"name": "Entity Enrichment - Phishing v2"
+			},
+			{
+				"description": "Use this playbook to retrieve the original email in the thread, including headers and attahcments, when the reporting user forwarded the original email not as an attachment.\n\nYou must have the necessary permissions in your Gmail service to execute global search: Google Apps Domain-Wide Delegation of Authority\n",
+				"name": "Get Original Email - Gmail"
+			},
+			{
+				"description": "Master playbook for phishing incidents. This playbook is a manual playbook.",
+				"name": "Phishing Playbook - Manual"
+			},
+			{
+				"description": "Calculates a severity according to the verdict coming from the CheckEmailAuthenticity script.",
+				"name": "Calculate Severity By Email Authenticity"
+			},
+			{
+				"description": "Add email details to the relevant context entities and handle the case where original emails are attached.",
+				"name": "Process Email - Core"
+			},
+			{
+				"description": "Use this playbook to retrieve the original email in the thread, including headers and attahcments, when the reporting user forwarded the original email not as an attachment.\n\nYou must have the necessary permissions in the EWS integration to execute global search: eDiscovery",
+				"name": "Get Original Email - EWS"
+			}
+		],
+		"report": null,
+		"reputation": null,
+		"widget": null
+	},
+	"created": "2020-05-12T10:55:43Z",
+	"currentVersion": "1.10.7",
+	"dependencies": {
+		"Base": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.3.33",
+			"name": "Base"
+		},
+		"CommonPlaybooks": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.8.5",
+			"name": "Common Playbooks"
+		},
+		"CommonScripts": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.2.75",
+			"name": "Common Scripts"
+		},
+		"CommonTypes": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "2.2.1",
+			"name": "Common Types"
+		},
+		"EWS": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": false,
+			"minVersion": "1.4.0",
+			"name": "EWS"
+		},
+		"EWSMailSender": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": false,
+			"minVersion": "1.0.0",
+			"name": "EWS Mail Sender"
+		},
+		"Gmail": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": false,
+			"minVersion": "1.1.1",
+			"name": "Gmail"
+		},
+		"GmailSingleUser": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": false,
+			"minVersion": "1.0.2",
+			"name": "Gmail Single User (Beta)"
+		},
+		"MailSenderNew": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": false,
+			"minVersion": "1.0.1",
+			"name": "Mail Sender (New)"
+		},
+		"MicrosoftGraphListener": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": false,
+			"minVersion": "1.0.9",
+			"name": "Microsoft Graph Mail Single User"
+		},
+		"MicrosoftGraphMail": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": false,
+			"minVersion": "1.0.13",
+			"name": "Microsoft Graph Mail"
+		},
+		"rasterize": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": false,
+			"minVersion": "1.0.5",
+			"name": "Rasterize"
+		}
+	},
+	"deprecated": false,
+	"description": "Phishing emails still hooking your end users? This Content Pack can drastically reduce the time your security team spends on phishing alerts.",
+	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
+	"fromServerVersion": "6.0.0",
+	"general": [
+		"generalFieldCertified",
+		"generalFieldByCortexXSOAR",
+		"generalFieldFree",
+		"generalFieldSupportIncluded"
+	],
+	"id": "Phishing",
+	"installMessage": "",
+	"integrations": [
+		{
+			"imagePath": "content/packs/MicrosoftGraphListener/MicrosoftGraphMailSingleUser_image.png",
+			"name": "Microsoft Graph Mail Single User"
+		},
+		{
+			"imagePath": "content/packs/EWSMailSender/EWSMailSender_image.png",
+			"name": "EWS Mail Sender"
+		},
+		{
+			"imagePath": "content/packs/MailSenderNew/MailSender%28New%29_image.png",
+			"name": "Mail Sender (New)"
+		},
+		{
+			"imagePath": "content/packs/MicrosoftGraphMail/MicrosoftGraphMail_image.png",
+			"name": "Microsoft Graph Mail"
+		},
+		{
+			"imagePath": "content/packs/EWS/EWSO365_image.png",
+			"name": "EWS O365"
+		},
+		{
+			"imagePath": "content/packs/EWS/EWSv2_image.png",
+			"name": "EWS v2"
+		},
+		{
+			"imagePath": "content/packs/GmailSingleUser/GmailSingleUser_image.png",
+			"name": "Gmail Single User (Beta)"
+		},
+		{
+			"imagePath": "content/packs/Gmail/Gmail_image.png",
+			"name": "Gmail"
+		},
+		{
+			"imagePath": "content/packs/rasterize/Rasterize_image.png",
+			"name": "Rasterize"
+		},
+		{
+			"imagePath": "content/packs/EWS/EWS_image.png",
+			"name": "EWS (Deprecated)"
+		}
+	],
+	"itemVersion": "1.10.7",
+	"keywords": [],
+	"legacy": true,
+	"name": "Phishing",
+	"packID": "Phishing",
+	"premium": false,
+	"previewOnly": false,
+	"price": 0,
+	"propagationLabels": [
+		"all"
+	],
+	"rawKeywords": null,
+	"rawTags": null,
+	"rawUseCases": null,
+	"readme": "Phishing emails are one of the most frequent, easily executable, and harmful security attacks that organizations – regardless of size – face today. High-volume, persistent phishing alerts are a time sink to manage, with incident response requiring coordination between multiple security products and communications with end users. \r\nThis Phishing content pack includes playbooks that automate phishing alert response and custom phishing incident fields, views and layouts to facilitate analyst investigation.  The phishing playbooks orchestrate across multiple products to extract and enrich IOCs, determine severity by cross-referencing against your external threat databases, send communications to your end users, identify and delete all instances of malicious emails to avoid further damage. \r\nWith this content pack, you can significantly reduce the time your security analysts spend on phishing alerts and standardize the way you manage phishing incidents.\r\n\r\n\r\n##### What does this pack do?\r\n- Retrieve emails from user inboxes or ingest them using mail listeners.\r\n- Create a phishing incident within Cortex XSOAR associated with the email.\r\n- Extract and enrich all indicators from email attachments. Analyze files and provide reputation using your sandbox and threat intelligence integrations.\r\n- Generate screenshot of the email and embedded links, and calculate reputation for all indicators involved.\r\n- Run checks for SSL certificates of URLs, email address breach involvement, domain-squatting and email authenticity using SPF, DKIM and DMARC checks.\r\n- Calculate severity for the incident based on initial severity provided, indicator reputations, email authenticity check and critical assets if any are involved.\r\n- Remediate the incident by blocking malicious indicators, searching and deleting malicious emails upon analyst approval\r\n- Engage with the end user regarding the incident such as notifying them of receipt of email and providing further instructions if email is found to be malicious.\r\n\r\nAs part of this pack, you will also get out-of-the-box phishing incident views, a full layout and automation scripts. All of these are easily customizable to suit the needs of your organization.\r\n\r\n_For more information, visit our [Cortex XSOAR Developer Docs](https://xsoar.pan.dev/docs/reference/playbooks/phishing-investigation---generic-v2)_\r\n\r\n![Phishing_Investigation_Generic_v2](https://raw.githubusercontent.com/demisto/content/7a20daa4d3560df3be0d2f3f41c00d43ac1a1e23/Packs/Phishing/doc_files/Phishing_Investigation_Generic_v2.png)\r\n",
+	"serverMaxVersion": "",
+	"serverMinVersion": "6.0.0",
+	"sortValues": null,
+	"support": "xsoar",
+	"supportDetails": {
+		"email": "",
+		"url": "https://www.paloaltonetworks.com/cortex"
+	},
+	"tags": [
+		"Scam",
+		"Spam",
+		"Email"
+	],
+	"toServerVersion": "",
+	"updated": "2020-11-17T15:08:55Z",
+	"useCases": [
+		"Phishing"
+	],
+	"version": -1,
+	"versionInfo": "180529"
+}

@@ -16,7 +16,7 @@ commonfields:
 contentitemexportablefields:
   contentitemfields:
     fromServerVersion: ""
-    itemVersion: 1.2.2
+    itemVersion: 1.3.0
     packID: EmailCommunication
     packPropagationLabels:
     - all

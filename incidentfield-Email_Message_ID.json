@@ -1,0 +1,53 @@
+{
+	"associatedToAll": false,
+	"associatedTypes": [
+		"Phishing"
+	],
+	"breachScript": "",
+	"caseInsensitive": false,
+	"cliName": "emailmessageid",
+	"closeForm": false,
+	"columns": null,
+	"content": true,
+	"defaultRows": null,
+	"description": "",
+	"editForm": true,
+	"fieldCalcScript": "",
+	"fromServerVersion": "5.0.0",
+	"group": 0,
+	"hidden": false,
+	"id": "incident_emailmessageid",
+	"isReadOnly": false,
+	"itemVersion": "1.10.7",
+	"locked": false,
+	"mergeStrategy": "",
+	"name": "Email Message ID",
+	"neverSetAsRequired": false,
+	"ownerOnly": false,
+	"packID": "Phishing",
+	"packPropagationLabels": [
+		"all"
+	],
+	"placeholder": "",
+	"propagationLabels": [],
+	"required": false,
+	"runScriptAfterUpdate": false,
+	"script": "",
+	"selectValues": null,
+	"sla": 0,
+	"sortValues": null,
+	"system": false,
+	"systemAssociatedTypes": [
+		"Phishing",
+		"Email Communication"
+	],
+	"threshold": 0,
+	"toServerVersion": "",
+	"type": "shortText",
+	"unmapped": false,
+	"unsearchable": false,
+	"useAsKpi": true,
+	"validatedError": "",
+	"validationRegex": "",
+	"version": -1
+}

@@ -1,0 +1,330 @@
+{
+	"author": "Cortex XSOAR",
+	"authorImage": "content/packs/Base/Author_image.png",
+	"beta": false,
+	"categories": [
+		"Utilities"
+	],
+	"certification": "certified",
+	"contentItemTypes": [
+		"automation",
+		"widget"
+	],
+	"contentItems": {
+		"automation": [
+			{
+				"description": "Returns all investigations larger than 1 MB from all Cortex XSOAR.",
+				"name": "GetLargestInvestigations",
+				"tags": [
+					"widget"
+				]
+			},
+			{
+				"description": "Returns inputs and outputs larger than 1 MB from all Cortex XSOAR investigations.",
+				"name": "GetLargestInputsAndOuputsInIncidents",
+				"tags": [
+					"widget"
+				]
+			}
+		],
+		"classifier": null,
+		"dashboard": null,
+		"incidentfield": null,
+		"incidenttype": null,
+		"indicatorfield": null,
+		"integration": null,
+		"layoutscontainer": null,
+		"playbook": null,
+		"report": null,
+		"reputation": null,
+		"widget": [
+			{
+				"name": "Elastic CPU Current Usage"
+			},
+			{
+				"name": "Open Tasks Per User"
+			},
+			{
+				"name": "Incident Types by Severity"
+			},
+			{
+				"name": "Manual Reputation Indicators by User"
+			},
+			{
+				"name": "Elastic JVM Memory Current Usage"
+			},
+			{
+				"name": "Unassigned Incidents"
+			},
+			{
+				"name": "Page Break Widget"
+			},
+			{
+				"name": "My Messages"
+			},
+			{
+				"name": "Most Active Users"
+			},
+			{
+				"name": "Server Memory Usage % (last 24h)"
+			},
+			{
+				"name": "Most Active Investigations"
+			},
+			{
+				"name": "Late Tasks by User"
+			},
+			{
+				"name": "Detection SLA by Status"
+			},
+			{
+				"name": "TopMaliciousRatioIndicators"
+			},
+			{
+				"name": "Image"
+			},
+			{
+				"name": "Mean Time to Detection"
+			},
+			{
+				"name": "Bad Indicators Activity by Type"
+			},
+			{
+				"name": "CPU Usage % per Engine"
+			},
+			{
+				"name": "MTTR Occurred by Type"
+			},
+			{
+				"name": "Text Widget"
+			},
+			{
+				"name": "Top Active Playbooks"
+			},
+			{
+				"name": "Active Incidents - Pie chart"
+			},
+			{
+				"name": "Unassigned Pending Incidents"
+			},
+			{
+				"name": "Busy Workers Count per Engine"
+			},
+			{
+				"name": "Remediation SLA by Status"
+			},
+			{
+				"name": "Server CPU Usage % (last 24h)"
+			},
+			{
+				"name": "MTTR by Type"
+			},
+			{
+				"name": "Latest Messages"
+			},
+			{
+				"name": "Closed By Dbot"
+			},
+			{
+				"name": "Manual Reputation Indicators"
+			},
+			{
+				"name": "Incidents By Close Reason"
+			},
+			{
+				"name": "Closed Incidents by Role"
+			},
+			{
+				"name": "Bad Indicators Activity"
+			},
+			{
+				"name": "Largest Inputs And Outputs In Incidents"
+			},
+			{
+				"name": "Running playbooks"
+			},
+			{
+				"name": "Workers per Engine"
+			},
+			{
+				"name": "MTTD by Type"
+			},
+			{
+				"name": "Memory Usage % per Engine (last 24h)"
+			},
+			{
+				"name": "Mentions"
+			},
+			{
+				"name": "Unassigned Active Incidents"
+			},
+			{
+				"name": "Incidents Top Close Analysts"
+			},
+			{
+				"name": "Disk Current Usage"
+			},
+			{
+				"name": "Return On Investment (ROI)"
+			},
+			{
+				"name": "Incidents by Role"
+			},
+			{
+				"name": "Late Tasks"
+			},
+			{
+				"name": "Unassigned Incidents"
+			},
+			{
+				"name": "Busy Workers per Engine (last 24h)"
+			},
+			{
+				"name": "Largest Incidents by Storage Size"
+			},
+			{
+				"name": "CPU Usage % per Engine (last 24h)"
+			},
+			{
+				"name": "Incidents Dropped in Preprocessing"
+			},
+			{
+				"name": "Mean Time to Resolution (Occurred)"
+			},
+			{
+				"name": "Important Messages"
+			},
+			{
+				"name": "Active Incidents by Role"
+			},
+			{
+				"name": "Indicators Activity"
+			},
+			{
+				"name": "Investigation Activity Timeline"
+			},
+			{
+				"name": "Memory Usage % per Engine"
+			},
+			{
+				"name": "Tasks By State"
+			},
+			{
+				"name": "Indicators Activity by Type"
+			},
+			{
+				"name": "Active Incidents Assigned by User"
+			},
+			{
+				"name": "Memory Current Usage"
+			},
+			{
+				"name": "Elastic Disk Current Usage"
+			},
+			{
+				"name": "Late Incidents"
+			},
+			{
+				"name": "Incident Severity by Type"
+			},
+			{
+				"name": "Incidents by Phase"
+			},
+			{
+				"name": "Disk Usage % per Engine (last 24h)"
+			},
+			{
+				"name": "Most Active Integrations"
+			},
+			{
+				"name": "Average Incident Duration by Role (Avg)"
+			},
+			{
+				"name": "Disk Usage % per Engine"
+			},
+			{
+				"name": "CPU Current Usage"
+			},
+			{
+				"name": "Incidents Occurred Per Day"
+			},
+			{
+				"name": "Late Incidents"
+			},
+			{
+				"name": "Incidents in Error Run Status"
+			},
+			{
+				"name": "Unassigned Closed Incidents"
+			},
+			{
+				"name": "Active Incidents - Line chart"
+			},
+			{
+				"name": "SLA by Incident Type"
+			},
+			{
+				"name": "My Tasks"
+			}
+		]
+	},
+	"created": "2020-05-31T14:22:25Z",
+	"currentVersion": "1.0.5",
+	"dependencies": {
+		"Base": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.3.33",
+			"name": "Base"
+		},
+		"CommonScripts": {
+			"author": "Cortex XSOAR",
+			"certification": "certified",
+			"mandatory": true,
+			"minVersion": "1.2.75",
+			"name": "Common Scripts"
+		}
+	},
+	"deprecated": false,
+	"description": "Frequently used widgets pack.",
+	"eulaLink": "https://github.com/demisto/content/blob/master/LICENSE",
+	"fromServerVersion": "6.0.0",
+	"general": [
+		"generalFieldCertified",
+		"generalFieldByCortexXSOAR",
+		"generalFieldFree",
+		"generalFieldSupportIncluded"
+	],
+	"id": "CommonWidgets",
+	"installMessage": "",
+	"integrations": [],
+	"itemVersion": "1.0.5",
+	"keywords": [],
+	"legacy": true,
+	"name": "Common Widgets",
+	"packID": "CommonWidgets",
+	"premium": false,
+	"previewOnly": false,
+	"price": 0,
+	"propagationLabels": [
+		"all"
+	],
+	"rawKeywords": null,
+	"rawTags": null,
+	"rawUseCases": null,
+	"serverMaxVersion": "",
+	"serverMinVersion": "6.0.0",
+	"sortValues": null,
+	"support": "xsoar",
+	"supportDetails": {
+		"email": "",
+		"url": "https://www.paloaltonetworks.com/cortex"
+	},
+	"tags": [],
+	"toServerVersion": "",
+	"updated": "2020-11-09T18:41:45Z",
+	"useCases": [],
+	"version": -1,
+	"versionInfo": "180529"
+}

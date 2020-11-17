@@ -1,0 +1,41 @@
+args:
+- description: The old value of the changed field
+  name: old
+- description: The new value of the changed field
+  name: new
+comment: Stops the "Time To Assign" timer if the owner of the incident was changed.
+commonfields:
+  id: StopTimeToAssignOnOwnerChange
+  version: -1
+contentitemexportablefields:
+  contentitemfields:
+    fromServerVersion: ""
+    itemVersion: 1.2.80
+    packID: CommonScripts
+    packPropagationLabels:
+    - all
+    propagationLabels: []
+    toServerVersion: ""
+enabled: true
+name: StopTimeToAssignOnOwnerChange
+pswd: ""
+runas: DBotWeakRole
+runonce: false
+script: |2
+
+  # ##### Help #####
+  # This is an example script. The script is used to stop the Time to Assignment SLA field,
+  # once an owner was set to an incident. If you want to use this script, you should go to
+  # the Owner field, and set this script as the script to run upon change of field value.
+
+  if not demisto.args().get('old') and demisto.args().get('new'):  # If owner was no-one and is now someone:
+      demisto.executeCommand("stopTimer", {"timerField": "timetoassignment"})
+      demisto.results("Assignment of the incident was successful and so the Time To Assignment"
+                      " timer has been stopped.")
+scripttarget: 0
+subtype: python2
+system: true
+tags:
+- field-change-triggered
+- example
+type: python

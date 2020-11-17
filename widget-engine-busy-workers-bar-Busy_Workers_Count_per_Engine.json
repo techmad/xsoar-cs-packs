@@ -1,0 +1,40 @@
+{
+	"category": "",
+	"dataType": "system",
+	"dateRange": {
+		"fromDate": "0001-01-01T00:00:00Z",
+		"fromDateLicense": "0001-01-01T00:00:00Z",
+		"period": {
+			"by": "",
+			"byFrom": "",
+			"byTo": "",
+			"field": "",
+			"fromValue": null,
+			"toValue": null
+		},
+		"toDate": "0001-01-01T00:00:00Z"
+	},
+	"description": "Current number of busy workers per engine",
+	"fromServerVersion": "5.0.0",
+	"id": "engine-busy-workers-bar",
+	"isPredefined": true,
+	"itemVersion": "1.0.5",
+	"name": "Busy Workers Count per Engine",
+	"packID": "CommonWidgets",
+	"packPropagationLabels": [
+		"all"
+	],
+	"params": {
+		"groupBy": [
+			"engine"
+		]
+	},
+	"propagationLabels": [],
+	"query": "engine.workers.busy-workers",
+	"size": 61,
+	"sort": null,
+	"sortValues": null,
+	"toServerVersion": "",
+	"version": -1,
+	"widgetType": "bar"
+}
